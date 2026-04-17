@@ -139,13 +139,13 @@ const teamMembers = [
   },
   {
     name: "Amit Shukla",
-    designation: "Manager- Northern Region- Employer Relations",
+    designation: "Manager - Employer Relations - Northern Region",
     email: "amit@leatherssc.org",
     mobile: "8299227304",
   },
   {
     name: "Shahzeb Alam",
-    designation: "Manager- Eastern Region- Employer Relations",
+    designation: "Manager - Employer Relations - Eastern Region",
     email: "shahzeb@leatherssc.org",
     mobile: "9123381187",
   },
