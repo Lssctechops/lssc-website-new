@@ -57,7 +57,7 @@ export const menuItems = [
           "https://drive.google.com/file/d/1YOtMDec2HrzRBviUEC-SKDlQMSlHKSP2/view",
       },
       { label: "PWD", route: "/courses/unlocking-potential" },
-      {
+      { 
         label: "PM AJAY",
         route:
           "https://drive.google.com/file/d/1yryf4xW-6TQhb1hMOa9PLYCuGLm2ChvS/view",

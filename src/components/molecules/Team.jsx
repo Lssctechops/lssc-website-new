@@ -103,7 +103,7 @@ const teamMembers = [
   },
   {
     name: "Mir Maqsood Ali",
-    designation: "Senior Manager- Administration & Governance",
+    designation: "Head - Administration & Governance",
     email: "maqsood@leatherssc.org",
     mobile: "7358588688",
   },
@@ -115,7 +115,7 @@ const teamMembers = [
   // },
   {
     name: "K Vimalathithan",
-    designation: "Manager- Training & Operations",
+    designation: "Head - Training & Operations",
     email: "vimal@leatherssc.org",
     mobile: "9585011594",
   },
@@ -139,13 +139,13 @@ const teamMembers = [
   },
   {
     name: "Amit Shukla",
-    designation: "Assistant Manager- Northern Region- Employer Relations",
+    designation: "Manager- Northern Region- Employer Relations",
     email: "amit@leatherssc.org",
     mobile: "8299227304",
   },
   {
     name: "Shahzeb Alam",
-    designation: "Assistant Manager- Eastern Region- Employer Relations",
+    designation: "Manager- Eastern Region- Employer Relations",
     email: "shahzeb@leatherssc.org",
     mobile: "9123381187",
   },
@@ -157,7 +157,7 @@ const teamMembers = [
   },
   {
     name: "Mohammed Yusuff",
-    designation: "Assistant- IT & Assessment",
+    designation: "Assistant Manager - IT & Assessment",
     email: "yusuff@leatherssc.org",
     mobile: "8939736143",
   },
