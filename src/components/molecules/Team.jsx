@@ -18,7 +18,7 @@ const teamMembers = [
     mobile: "7358588688",
     linkedin: "https://linkedin.com/in/mir-maqsood-ali-7488641b1",
     image:
-      "https://imagedelivery.net/QG8_dZ1qAgTI1Cq9RSDiZg/aed5c730-4057-49d7-cbbe-1d3bd593ee00/public",
+      "https://imagedelivery.net/QG8_dZ1qAgTI1Cq9RSDiZg/f96c1872-baba-4cde-cf73-027683bf5700/public",
   },
   {
     name: "K Vimalathithan",
@@ -27,7 +27,7 @@ const teamMembers = [
     mobile: "9585011594",
     linkedin: "https://linkedin.com/in/vimalathithan-krishnasamy-27386298",
     image:
-      "https://imagedelivery.net/QG8_dZ1qAgTI1Cq9RSDiZg/aed5c730-4057-49d7-cbbe-1d3bd593ee00/public",
+      "https://imagedelivery.net/QG8_dZ1qAgTI1Cq9RSDiZg/658ccec6-b83a-4d9f-273d-5ae39b706a00/public",
   },
   {
     name: "Ayush Chaturvedi",
@@ -36,7 +36,7 @@ const teamMembers = [
     mobile: "9205615261",
     linkedin: "https://linkedin.com/in/ayush-chaturvedi-176900138",
     image:
-      "https://imagedelivery.net/QG8_dZ1qAgTI1Cq9RSDiZg/aed5c730-4057-49d7-cbbe-1d3bd593ee00/public",
+      "https://imagedelivery.net/QG8_dZ1qAgTI1Cq9RSDiZg/f02a79e9-1d32-4df0-b203-d716739bfe00/public",
   },
   {
     name: "Abhimanyu Kumar",
@@ -45,7 +45,7 @@ const teamMembers = [
     mobile: "9833040928",
     linkedin: "https://linkedin.com/in/abhimanyu-kumar-98b94512b",
     image:
-      "https://imagedelivery.net/QG8_dZ1qAgTI1Cq9RSDiZg/aed5c730-4057-49d7-cbbe-1d3bd593ee00/public",
+      "https://imagedelivery.net/QG8_dZ1qAgTI1Cq9RSDiZg/84af7bce-a21e-4e27-c3d4-efa442a23700/public",
   },
   {
     name: "Satish Kumar",
@@ -54,7 +54,7 @@ const teamMembers = [
     mobile: "7277239976",
     linkedin: "https://linkedin.com/in/",
     image:
-      "https://imagedelivery.net/QG8_dZ1qAgTI1Cq9RSDiZg/aed5c730-4057-49d7-cbbe-1d3bd593ee00/public",
+      "https://imagedelivery.net/QG8_dZ1qAgTI1Cq9RSDiZg/65eeeae1-2f3a-4bad-671a-20a1ecfd3b00/public",
   },
   {
     name: "Amit Shukla",
@@ -63,7 +63,7 @@ const teamMembers = [
     mobile: "8299227304",
     linkedin: "https://linkedin.com/in/amit-shukla-486225215",
     image:
-      "https://imagedelivery.net/QG8_dZ1qAgTI1Cq9RSDiZg/aed5c730-4057-49d7-cbbe-1d3bd593ee00/public",
+      "https://imagedelivery.net/QG8_dZ1qAgTI1Cq9RSDiZg/9816057c-4944-4fa4-7eb0-c9168632d400/public",
   },
   {
     name: "Shahzeb Alam",
@@ -80,7 +80,7 @@ const teamMembers = [
       "Assistant Manager - Academics & Technical Research",
     email: "technical@leatherssc.org",
     mobile: "9910286513",
-    linkedin: "https://linkedin.com/in/",
+    linkedin: "https://linkedin.com/in/neeraj-sharma-01946467",
     image:
       "https://imagedelivery.net/QG8_dZ1qAgTI1Cq9RSDiZg/aed5c730-4057-49d7-cbbe-1d3bd593ee00/public",
   },
