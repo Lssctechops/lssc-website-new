@@ -1,271 +1,319 @@
 import Image from "next/image";
 import StyledHeading from "../atoms/StyledHeading";
-// const teamMembers = [
-//   {
-//     name: "Sanjay Kumar",
-//     designation: "Chief Executive Officer",
-//     email: "ceo@leatherssc.org, ed@leatherssc.org",
-//     mobile: "9958117009",
-//   },
-//   {
-//     name: "Mir Maqsood Ali",
-//     designation: "Sr Manager-Admin & Governance",
-//     email: "maqsood@leatherssc.org",
-//     mobile: "7358588688",
-//   },
-//   {
-//     name: "J. Srilekha",
-//     designation: "Manager- Finance",
-//     email: "jsrilekha@leatherssc.org",
-//     mobile: "7358037028",
-//   },
-//   {
-//     name: "K Vimalathithan",
-//     designation: "Manager- Training Operations",
-//     email: "vimal@leatherssc.org",
-//     mobile: "9585011594",
-//   },
-//   {
-//     name: "Abhimanyu Kumar",
-//     designation: "Manager – IT",
-//     email: "-",
-//     mobile: "9833040928",
-//   },
-//   {
-//     name: "Amit Shukla",
-//     designation: "Assistant Manager - Employer Relations",
-//     email: "amit@leatherssc.org",
-//     mobile: "8299227304",
-//   },
-//   {
-//     name: "Shahzeb Alam",
-//     designation: "Assistant Manager - Employer Relations",
-//     email: "shahzeb@leatherssc.org",
-//     mobile: "9123381187",
-//   },
-//   {
-//     name: "Ayush Chaturvedi",
-//     designation: "Head - Assessments",
-//     email: "assessments@leatherssc.org",
-//     mobile: "9205615261",
-//   },
-//   {
-//     name: "Neeraj Kumar Sharma",
-//     designation: "Assistant Manager - Academics & Technical Research",
-//     email: "technical@leatherssc.org",
-//     mobile: "9910286513",
-//   },
-//   {
-//     name: "Mohammed Yusuff",
-//     designation: "Executive - It & Assessments",
-//     email: "yusuff@leatherssc.org",
-//     mobile: "8939736143",
-//   },
-//   {
-//     name: "Anuj Kumar Patel",
-//     designation: "Executive - Assessments",
-//     email: "anuj@leatherssc.org",
-//     mobile: "9131473018",
-//   },
-//   {
-//     name: "Govindarajan B",
-//     designation: "Master Trainer",
-//     email: "govindarajan@leatherssc.org",
-//     mobile: "9445214516",
-//   },
-//   {
-//     // name: "Elangovan M",
-//     name: "M.Elangovan",
-//     designation: "Pattern Master and Master Trainer",
-//     email: "elangovan@leatherssc.org",
-//     mobile: "9176662820",
-//   },
-//   {
-//     name: "Dhivakaran",
-//     designation: "Executive",
-//     email: "lssc@leatherssc.org",
-//     mobile: "9994441917",
-//   },
-//   // {
-//   //   name: "Dev Chandra Joshi",
-//   //   designation: "Executive - Assessments",
-//   //   email: "lssc@leatherssc.org",
-//   //   mobile: "9354143420",
-//   // },
-// ];
+
 const teamMembers = [
   {
     name: "Atul Kumar Mishra",
     designation: "Interim Chief Executive Officer",
     email: "ceo@leatherssc.org",
-    // email: "ceo@leatherssc.org, ed@leatherssc.org",
-    mobile: " 9971489936",
+    mobile: "9971489936",
+    linkedin: "https://linkedin.com/in/atul-kumar-mishra-60090715",
+    image:
+      "https://imagedelivery.net/QG8_dZ1qAgTI1Cq9RSDiZg/0fe75bb2-cd9c-4a2e-a82a-41bd2cea6700/public",
   },
   {
     name: "Mir Maqsood Ali",
     designation: "Head - Administration & Governance",
     email: "maqsood@leatherssc.org",
     mobile: "7358588688",
+    linkedin: "https://linkedin.com/in/mir-maqsood-ali-7488641b1",
+    image:
+      "https://imagedelivery.net/QG8_dZ1qAgTI1Cq9RSDiZg/aed5c730-4057-49d7-cbbe-1d3bd593ee00/public",
   },
-  // {
-  //   name: "J. Srilekha",
-  //   designation: "Manager- Finance",
-  //   email: "jsrilekha@leatherssc.org",
-  //   mobile: "7358037028",
-  // },
   {
     name: "K Vimalathithan",
     designation: "Head - Training & Operations",
     email: "vimal@leatherssc.org",
     mobile: "9585011594",
+    linkedin: "https://linkedin.com/in/vimalathithan-krishnasamy-27386298",
+    image:
+      "https://imagedelivery.net/QG8_dZ1qAgTI1Cq9RSDiZg/aed5c730-4057-49d7-cbbe-1d3bd593ee00/public",
   },
   {
     name: "Ayush Chaturvedi",
     designation: "Head - Assessments",
     email: "assessments@leatherssc.org",
     mobile: "9205615261",
+    linkedin: "https://linkedin.com/in/ayush-chaturvedi-176900138",
+    image:
+      "https://imagedelivery.net/QG8_dZ1qAgTI1Cq9RSDiZg/aed5c730-4057-49d7-cbbe-1d3bd593ee00/public",
   },
   {
     name: "Abhimanyu Kumar",
     designation: "Manager – IT",
     email: "it@leatherssc.org",
     mobile: "9833040928",
+    linkedin: "https://linkedin.com/in/abhimanyu-kumar-98b94512b",
+    image:
+      "https://imagedelivery.net/QG8_dZ1qAgTI1Cq9RSDiZg/aed5c730-4057-49d7-cbbe-1d3bd593ee00/public",
   },
   {
     name: "Satish Kumar",
     designation: "Manager – Accounts",
     email: "accounts@leatherssc.org",
     mobile: "7277239976",
+    linkedin: "https://linkedin.com/in/",
+    image:
+      "https://imagedelivery.net/QG8_dZ1qAgTI1Cq9RSDiZg/aed5c730-4057-49d7-cbbe-1d3bd593ee00/public",
   },
   {
     name: "Amit Shukla",
-    designation: "Manager - Employer Relations - Northern Region",
+    designation: "Manager - Employer Relations",
     email: "amit@leatherssc.org",
     mobile: "8299227304",
+    linkedin: "https://linkedin.com/in/amit-shukla-486225215",
+    image:
+      "https://imagedelivery.net/QG8_dZ1qAgTI1Cq9RSDiZg/aed5c730-4057-49d7-cbbe-1d3bd593ee00/public",
   },
   {
     name: "Shahzeb Alam",
-    designation: "Manager - Employer Relations - Eastern Region",
+    designation: "Manager - Employer Relations",
     email: "shahzeb@leatherssc.org",
     mobile: "9123381187",
+    linkedin: "https://linkedin.com/in/shahzeb-alam-448127110",
+    image:
+      "https://imagedelivery.net/QG8_dZ1qAgTI1Cq9RSDiZg/aed5c730-4057-49d7-cbbe-1d3bd593ee00/public",
   },
   {
     name: "Neeraj Kumar Sharma",
-    designation: "Assistant Manager- QP- Academics & Technical Research",
+    designation:
+      "Assistant Manager - Academics & Technical Research",
     email: "technical@leatherssc.org",
     mobile: "9910286513",
+    linkedin: "https://linkedin.com/in/",
+    image:
+      "https://imagedelivery.net/QG8_dZ1qAgTI1Cq9RSDiZg/aed5c730-4057-49d7-cbbe-1d3bd593ee00/public",
   },
   {
     name: "Mohammed Yusuff",
     designation: "Assistant Manager - IT & Assessment",
     email: "yusuff@leatherssc.org",
     mobile: "8939736143",
+    linkedin: "https://linkedin.com/in/mohammed-yusuff-b7835923b",
+    image:
+      "https://imagedelivery.net/QG8_dZ1qAgTI1Cq9RSDiZg/a16f7c6b-3234-49dd-7035-d5a58d8a6300/public",
   },
   {
     name: "Anuj Kumar Patel",
     designation: "Executive - Assessments",
     email: "anuj@leatherssc.org",
     mobile: "9131473018",
+    linkedin: "https://linkedin.com/in/anuj-kumar-patel-94218436b",
+    image:
+      "https://imagedelivery.net/QG8_dZ1qAgTI1Cq9RSDiZg/aed5c730-4057-49d7-cbbe-1d3bd593ee00/public",
   },
   {
     name: "Govindarajan B",
     designation: "Master Trainer",
     email: "govindarajan@leatherssc.org",
     mobile: "9445241516",
+    linkedin: "https://linkedin.com/in/govindarajan-balasundaram-33911421a",
+    image:
+      "https://imagedelivery.net/QG8_dZ1qAgTI1Cq9RSDiZg/aed5c730-4057-49d7-cbbe-1d3bd593ee00/public",
   },
   {
     name: "M. Elangovan",
     designation: "Pattern Maker & Master Trainer",
     email: "elangovan@leatherssc.org",
     mobile: "9176662820",
+    linkedin: "https://linkedin.com/in/",
+    image:
+      "https://imagedelivery.net/QG8_dZ1qAgTI1Cq9RSDiZg/aed5c730-4057-49d7-cbbe-1d3bd593ee00/public",
   },
   {
     name: "Dhivakaran",
     designation: "Executive",
     email: "lssc@leatherssc.org",
     mobile: "9994441917",
+    linkedin: "https://linkedin.com/in/",
+    image: "https://imagedelivery.net/QG8_dZ1qAgTI1Cq9RSDiZg/aed5c730-4057-49d7-cbbe-1d3bd593ee00/public",
   },
 ];
 
 const Team = () => {
   return (
-    <section id="our-team" className="space-y-6">
-      <StyledHeading
-        heading={
-          <>
-            <span className="text-primary-600">Meet</span> The Team
-          </>
-        }
-        containerStyle={"mx-auto"}
-      />
-      <p className="mx-auto text-center lg:w-[60%]">
-        Our team of passionate professionals with deep industry knowledge is
-        committed to driving excellence in skill development, training, and
-        industry collaboration. Whether you are an industry partner, a training
-        provider, or an aspiring professional, our team is always ready to
-        assist you. Please feel free to reach out to us.
-      </p>
-      <div className="xl:w-[80%] mx-auto">
-        {/* <div className="relative">
-          <div className="flex justify-center">
-            <Image
-              className="h-full ps-5 w-56 object-cover"
-              src="/img/person.png"
-              alt="team"
-              width={600}
-              height={1200}
-            />
+    <section
+      id="our-team"
+      className="py-16 px-4 bg-gradient-to-b from-white to-primary-50"
+    >
+      <div className="max-w-7xl mx-auto">
+
+        {/* HEADING */}
+        <StyledHeading
+          heading={
+            <>
+              Meet Our{" "}
+              <span className="text-primary-600">Team</span>
+            </>
+          }
+          containerStyle={"mx-auto"}
+        />
+
+        {/* DESCRIPTION */}
+        <p className="text-center text-gray-600 max-w-3xl mx-auto mt-4 leading-7">
+          Our dedicated professionals work together to drive
+          excellence in training, assessments, skill development,
+          and industry collaboration across the leather sector.
+        </p>
+
+        {/* CEO CARD */}
+        <div className="flex justify-center mt-14 mb-16">
+          <div className="relative overflow-hidden rounded-3xl p-[1px] bg-gradient-to-br from-primary-400 via-primary-200 to-primary-600 max-w-sm w-full">
+
+            <div className="bg-white rounded-3xl p-8 text-center relative">
+
+              {/* GLOW */}
+              <div className="absolute top-0 left-0 w-full h-32 bg-primary-100 opacity-40 blur-3xl"></div>
+
+              {/* CEO IMAGE */}
+              <div className="relative flex justify-center z-10">
+                <div className="relative w-48 h-48 rounded-full overflow-hidden border-4 border-primary-100 shadow-xl">
+
+                  <Image
+                    src={teamMembers[0].image}
+                    alt={teamMembers[0].name}
+                    fill
+                    className="object-cover object-top"
+                  />
+                </div>
+              </div>
+
+              {/* CEO NAME */}
+              <h2 className="mt-6 text-2xl font-bold text-gray-800 relative z-10">
+                {teamMembers[0].name}
+              </h2>
+
+              {/* CEO DESIGNATION */}
+              <p className="text-primary-600 font-medium mt-2 relative z-10">
+                {teamMembers[0].designation}
+              </p>
+
+              {/* CEO EMAIL */}
+              <a
+                href={`mailto:${teamMembers[0].email}`}
+                className="text-gray-600 text-sm mt-5 break-all relative z-10 flex items-center justify-center gap-2 hover:text-primary-600"
+              >
+                <img
+                  src="https://cdn-icons-png.flaticon.com/512/732/732200.png"
+                  alt="email"
+                  className="w-5 h-5"
+                />
+                {teamMembers[0].email}
+              </a>
+
+              {/* CEO MOBILE */}
+              <a
+                href={`tel:${teamMembers[0].mobile}`}
+                className="text-gray-700 text-sm mt-3 relative z-10 flex items-center justify-center gap-2 hover:text-primary-600"
+              >
+                <img
+                  src="https://cdn-icons-png.flaticon.com/512/724/724664.png"
+                  alt="phone"
+                  className="w-5 h-5"
+                />
+                {teamMembers[0].mobile}
+              </a>
+
+              {/* CEO LINKEDIN */}
+              <a
+                href={teamMembers[0].linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-4 inline-flex items-center gap-2 text-blue-600 hover:text-blue-800"
+              >
+                <img
+                  src="https://cdn-icons-png.flaticon.com/512/174/174857.png"
+                  alt="linkedin"
+                  className="w-6 h-6"
+                />
+                LinkedIn
+              </a>
+            </div>
           </div>
-          <h4 className="text-center text-lg font-medium">Sanjay Kumar</h4>
-          <p className="text-center font-normal">EXECUTIVE DIRECTOR</p>
-          <p className="absolute top-0 -right-5 w-[55%] text-center text-sm font-normal">
-            “A strong organisation culture built on trust, engagement, and
-            inclusivity.”
-          </p>
-        </div> */}
-        <div className="overflow-x-auto ">
-          <table className="w-full min-w-[1000px] border-collapse border-4 border-white lg:min-w-fit">
-            <thead>
-              <tr>
-                <th className="bg-primary-200 border-4 border-white px-4 py-2 text-sm font-medium">
-                  S.No
-                </th>
-                <th className="bg-primary-200 border-4 border-white px-4 py-2 text-sm font-medium">
-                  Names
-                </th>
-                <th className="bg-primary-200 border-4 border-white px-4 py-2 text-sm font-medium">
-                  Designation
-                </th>
-                <th className="bg-primary-200 border-4 border-white px-4 py-2 text-sm font-medium">
-                  Email
-                </th>
-                <th className="bg-primary-200 border-4 border-white px-4 py-2 text-sm font-medium">
-                  Mobile No.
-                </th>
-              </tr>
-            </thead>
-            <tbody>
-              {teamMembers.map((team, index) => (
-                <tr>
-                  <td className="text-center bg-primary-200 border-4 border-white px-4 py-2 text-sm">
-                    {index + 1}
-                  </td>
-                  <td className="bg-primary-200 border-4 border-white px-4 py-2 text-sm capitalize">
-                    {team.name}
-                  </td>
-                  <td className="bg-primary-200 border-4 border-white px-4 py-2 text-sm">
-                    {team.designation}
-                  </td>
-                  <td className="bg-primary-200 border-4 border-white px-4 py-2 text-sm">
-                    {team.email}
-                  </td>
-                  <td className="bg-primary-200 border-4 border-white px-4 py-2 text-sm">
-                    {team.mobile}
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
+        </div>
+
+        {/* TEAM MEMBERS */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+
+          {teamMembers.slice(1).map((team, index) => (
+            <div
+              key={index}
+              className="relative overflow-hidden rounded-3xl p-[1px] bg-gradient-to-br from-primary-400 via-primary-200 to-primary-600 hover:scale-105 transition-all duration-300"
+            >
+
+              {/* CARD */}
+              <div className="bg-white rounded-3xl h-full p-10 text-center relative">
+
+                {/* GLOW */}
+                <div className="absolute top-0 left-0 w-full h-32 bg-primary-100 opacity-40 blur-3xl"></div>
+
+                {/* IMAGE */}
+                <div className="relative flex justify-center z-10">
+                  <div className="relative w-40 h-40 rounded-full overflow-hidden border-4 border-primary-100 shadow-lg">
+
+                    <Image
+                      src={team.image}
+                      alt={team.name}
+                      fill
+                      className="object-cover object-top"
+                    />
+                  </div>
+                </div>
+
+                {/* NAME */}
+                <h3 className="mt-5 text-lg font-bold text-gray-800 relative z-10">
+                  {team.name}
+                </h3>
+
+                {/* DESIGNATION */}
+                <p className="text-primary-600 text-sm mt-2 min-h-[48px] relative z-10">
+                  {team.designation}
+                </p>
+
+                {/* EMAIL */}
+                <a
+                  href={`mailto:${team.email}`}
+                  className="text-gray-600 text-sm mt-4 break-all relative z-10 flex items-center justify-center gap-2 hover:text-primary-600"
+                >
+                  <img
+                    src="https://cdn-icons-png.flaticon.com/512/732/732200.png"
+                    alt="email"
+                    className="w-5 h-5"
+                  />
+                  {team.email}
+                </a>
+
+                {/* MOBILE */}
+                <a
+                  href={`tel:${team.mobile}`}
+                  className="text-gray-700 text-sm mt-3 relative z-10 flex items-center justify-center gap-2 hover:text-primary-600"
+                >
+                  <img
+                    src="https://cdn-icons-png.flaticon.com/512/724/724664.png"
+                    alt="phone"
+                    className="w-5 h-5"
+                  />
+                  {team.mobile}
+                </a>
+
+                {/* LINKEDIN */}
+                <a
+                  href={team.linkedin}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-4 inline-flex items-center gap-2 text-blue-600 hover:text-blue-800"
+                >
+                  <img
+                    src="https://cdn-icons-png.flaticon.com/512/174/174857.png"
+                    alt="linkedin"
+                    className="w-6 h-6"
+                  />
+                  LinkedIn
+                </a>
+
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </section>
