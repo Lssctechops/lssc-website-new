@@ -126,7 +126,8 @@ const teamMembers = [
     email: "lssc@leatherssc.org",
     mobile: "9994441917",
     linkedin: "https://linkedin.com/in/",
-    image: "https://imagedelivery.net/QG8_dZ1qAgTI1Cq9RSDiZg/aed5c730-4057-49d7-cbbe-1d3bd593ee00/public",
+    image:
+      "https://imagedelivery.net/QG8_dZ1qAgTI1Cq9RSDiZg/aed5c730-4057-49d7-cbbe-1d3bd593ee00/public",
   },
 ];
 
@@ -194,9 +195,9 @@ const Team = () => {
                 className="text-gray-600 text-sm mt-5 break-all relative z-10 flex items-center justify-center gap-2 hover:text-primary-600"
               >
                 <img
-                  src="https://cdn-icons-png.flaticon.com/512/732/732200.png"
-                  alt="email"
-                  className="w-5 h-5"
+                  src="https://imagedelivery.net/QG8_dZ1qAgTI1Cq9RSDiZg/fd4855fa-0f2e-4317-d998-da9ae051d300/public"
+                  alt="Zoho Mail"
+                  className="w-5 h-5 object-contain"
                 />
                 {teamMembers[0].email}
               </a>
@@ -276,9 +277,9 @@ const Team = () => {
                   className="text-gray-600 text-sm mt-4 break-all relative z-10 flex items-center justify-center gap-2 hover:text-primary-600"
                 >
                   <img
-                    src="https://cdn-icons-png.flaticon.com/512/732/732200.png"
-                    alt="email"
-                    className="w-5 h-5"
+                    src="https://imagedelivery.net/QG8_dZ1qAgTI1Cq9RSDiZg/fd4855fa-0f2e-4317-d998-da9ae051d300/public"
+                    alt="Zoho Mail"
+                    className="w-5 h-5 object-contain"
                   />
                   {team.email}
                 </a>
