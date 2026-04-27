@@ -71,7 +71,7 @@ email: "shahzeb@leatherssc.org",
 mobile: "9123381187", 
 linkedin: "https://linkedin.com/in/shahzeb-alam-448127110", 
 image: 
-"https://imagedelivery.net/QG8_dZ1qAgTI1Cq9RSDiZg/4340233a-c530-408e-18f5-3447d3fa5900/public", 
+"https://imagedelivery.net/QG8_dZ1qAgTI1Cq9RSDiZg/dbbfc40b-0988-4601-b78e-c4f641303300/public", 
 }, 
 { 
 name: "Neeraj Kumar Sharma", 
@@ -81,7 +81,7 @@ email: "technical@leatherssc.org",
 mobile: "9910286513", 
 linkedin: "https://linkedin.com/in/neeraj-sharma-01946467", 
 image: 
-"https://imagedelivery.net/QG8_dZ1qAgTI1Cq9RSDiZg/d2a0079b-a9a5-44ba-ed4c-64d08b21e700/public", 
+"https://imagedelivery.net/QG8_dZ1qAgTI1Cq9RSDiZg/6ac21264-fdf4-4b39-ccfc-1ed685574f00/public", 
 }, 
 { 
 name: "Mohammed Yusuff", 
@@ -294,4 +294,4 @@ LinkedIn
 </section> 
 ); 
 }; 
-export default Team;
+export default Team; 
