@@ -62,7 +62,7 @@ email: "amit@leatherssc.org",
 mobile: "8299227304", 
 linkedin: "https://linkedin.com/in/amit-shukla-486225215", 
 image: 
-"https://imagedelivery.net/QG8_dZ1qAgTI1Cq9RSDiZg/9816057c-4944-4fa4-7eb0-c9168632d400/public", 
+"https://imagedelivery.net/QG8_dZ1qAgTI1Cq9RSDiZg/077a9ddc-5f97-4144-3203-95c6190de200/public", 
 }, 
 { 
 name: "Shahzeb Alam", 
