@@ -99,11 +99,11 @@ email: "anuj@leatherssc.org",
 mobile: "9131473018", 
 linkedin: "https://linkedin.com/in/anuj-kumar-patel-94218436b", 
 image: 
-"https://imagedelivery.net/QG8_dZ1qAgTI1Cq9RSDiZg/536be974-dadd-4260-f380-65a996bb5800/public", 
+"https://imagedelivery.net/QG8_dZ1qAgTI1Cq9RSDiZg/9e3d1e55-23f9-4134-131d-1e6e64cb5100/public", 
 }, 
 { 
 name: "Govindarajan B", 
-designation: "Master Trainer", 
+designation: "Master Trainer & SME ", 
 email: "govindarajan@leatherssc.org", 
 mobile: "9445241516", 
 linkedin: "https://linkedin.com/in/govindarajan-balasundaram-33911421a", 
