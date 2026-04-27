@@ -45,7 +45,7 @@ const teamMembers = [
     mobile: "9833040928",
     linkedin: "https://linkedin.com/in/abhimanyu-kumar-98b94512b",
     image:
-      "https://imagedelivery.net/QG8_dZ1qAgTI1Cq9RSDiZg/84af7bce-a21e-4e27-c3d4-efa442a23700/public",
+      "https://imagedelivery.net/QG8_dZ1qAgTI1Cq9RSDiZg/82f27cf8-318c-4ab2-cae4-2859df2ebf00/public",
   },
   {
     name: "Satish Kumar",
@@ -72,7 +72,7 @@ const teamMembers = [
     mobile: "9123381187",
     linkedin: "https://linkedin.com/in/shahzeb-alam-448127110",
     image:
-      "https://imagedelivery.net/QG8_dZ1qAgTI1Cq9RSDiZg/aed5c730-4057-49d7-cbbe-1d3bd593ee00/public",
+      "https://imagedelivery.net/QG8_dZ1qAgTI1Cq9RSDiZg/4340233a-c530-408e-18f5-3447d3fa5900/public",
   },
   {
     name: "Neeraj Kumar Sharma",
@@ -82,7 +82,7 @@ const teamMembers = [
     mobile: "9910286513",
     linkedin: "https://linkedin.com/in/neeraj-sharma-01946467",
     image:
-      "https://imagedelivery.net/QG8_dZ1qAgTI1Cq9RSDiZg/aed5c730-4057-49d7-cbbe-1d3bd593ee00/public",
+      "https://imagedelivery.net/QG8_dZ1qAgTI1Cq9RSDiZg/d2a0079b-a9a5-44ba-ed4c-64d08b21e700/public",
   },
   {
     name: "Mohammed Yusuff",
@@ -91,7 +91,7 @@ const teamMembers = [
     mobile: "8939736143",
     linkedin: "https://linkedin.com/in/mohammed-yusuff-b7835923b",
     image:
-      "https://imagedelivery.net/QG8_dZ1qAgTI1Cq9RSDiZg/a16f7c6b-3234-49dd-7035-d5a58d8a6300/public",
+      "https://imagedelivery.net/QG8_dZ1qAgTI1Cq9RSDiZg/9408d4bc-4c5d-423d-a606-285bf096e500/public",
   },
   {
     name: "Anuj Kumar Patel",
@@ -100,7 +100,7 @@ const teamMembers = [
     mobile: "9131473018",
     linkedin: "https://linkedin.com/in/anuj-kumar-patel-94218436b",
     image:
-      "https://imagedelivery.net/QG8_dZ1qAgTI1Cq9RSDiZg/aed5c730-4057-49d7-cbbe-1d3bd593ee00/public",
+      "https://imagedelivery.net/QG8_dZ1qAgTI1Cq9RSDiZg/536be974-dadd-4260-f380-65a996bb5800/public",
   },
   {
     name: "Govindarajan B",
@@ -109,7 +109,7 @@ const teamMembers = [
     mobile: "9445241516",
     linkedin: "https://linkedin.com/in/govindarajan-balasundaram-33911421a",
     image:
-      "https://imagedelivery.net/QG8_dZ1qAgTI1Cq9RSDiZg/aed5c730-4057-49d7-cbbe-1d3bd593ee00/public",
+      "https://imagedelivery.net/QG8_dZ1qAgTI1Cq9RSDiZg/a11a03b3-c504-484c-d9be-cb2973b29c00/public",
   },
   {
     name: "M. Elangovan",
@@ -118,7 +118,7 @@ const teamMembers = [
     mobile: "9176662820",
     linkedin: "https://linkedin.com/in/",
     image:
-      "https://imagedelivery.net/QG8_dZ1qAgTI1Cq9RSDiZg/aed5c730-4057-49d7-cbbe-1d3bd593ee00/public",
+      "https://imagedelivery.net/QG8_dZ1qAgTI1Cq9RSDiZg/0e74893a-f2c6-4098-bc57-4928836d9300/public",
   },
   {
     name: "Dhivakaran",
@@ -127,7 +127,7 @@ const teamMembers = [
     mobile: "9994441917",
     linkedin: "https://linkedin.com/in/",
     image:
-      "https://imagedelivery.net/QG8_dZ1qAgTI1Cq9RSDiZg/aed5c730-4057-49d7-cbbe-1d3bd593ee00/public",
+      "https://imagedelivery.net/QG8_dZ1qAgTI1Cq9RSDiZg/c5131a7a-0c5b-4f63-a395-ce038b5cbb00/public",
   },
 ];
 
