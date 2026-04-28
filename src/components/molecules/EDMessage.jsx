@@ -25,7 +25,7 @@ const EDMessage = () => {
 
         <div className="w-full col-span-2 xl:col-span-3 flex flex-col gap-2 md:gap-3">
           <h2 className="text-[18px] md:text-[20px] lg:text-[24px]  font-bold">
-            From the Desk of Chief Executive Officer
+            From the Desk of Interim Chief Executive Officer 
           </h2>
 
           <div className="font-medium space-y-4 text-[10px] sm:text-[12px] md:text-[13px] lg:text-[14px] leading-relaxed text-gray-800">
