@@ -51,7 +51,7 @@ const teamMembers = [
         designation: "Manager – Accounts",
         email: "accounts@leatherssc.org",
         mobile: "7277239976",
-        linkedin: "https://linkedin.com/in/",
+        linkedin: "",
         image:
             "https://imagedelivery.net/QG8_dZ1qAgTI1Cq9RSDiZg/65eeeae1-2f3a-4bad-671a-20a1ecfd3b00/public",
     },
@@ -81,7 +81,7 @@ const teamMembers = [
         mobile: "9910286513",
         linkedin: "https://linkedin.com/in/neeraj-sharma-01946467",
         image:
-            "https://imagedelivery.net/QG8_dZ1qAgTI1Cq9RSDiZg/6ac21264-fdf4-4b39-ccfc-1ed685574f00/public",
+            "https://imagedelivery.net/QG8_dZ1qAgTI1Cq9RSDiZg/d4e8f13a-c45d-46b8-e6c0-cd7e8a205700/public",
     },
     {
         name: "Mohammed Yusuff",
@@ -115,7 +115,7 @@ const teamMembers = [
         designation: "Pattern Maker & Master Trainer",
         email: "elangovan@leatherssc.org",
         mobile: "9176662820",
-        linkedin: "https://linkedin.com/in/",
+        linkedin: "",
         image:
             "https://imagedelivery.net/QG8_dZ1qAgTI1Cq9RSDiZg/0e74893a-f2c6-4098-bc57-4928836d9300/public",
     },
@@ -124,7 +124,7 @@ const teamMembers = [
         designation: "Executive",
         email: "lssc@leatherssc.org",
         mobile: "9994441917",
-        linkedin: "https://linkedin.com/in/",
+        linkedin: "",
         image:
             "https://imagedelivery.net/QG8_dZ1qAgTI1Cq9RSDiZg/c5131a7a-0c5b-4f63-a395-ce038b5cbb00/public",
     },
