@@ -21,7 +21,7 @@ const teamMembers = [
     },
     {
         name: "K Vimalathithan",
-        designation: "Head - Training & Operations",
+        designation: "Head - Operations",
         email: "vimal@leatherssc.org",
         mobile: "9585011594",
         linkedin: "https://linkedin.com/in/vimalathithan-krishnasamy-27386298",
@@ -55,6 +55,15 @@ const teamMembers = [
         image:
             "https://imagedelivery.net/QG8_dZ1qAgTI1Cq9RSDiZg/dbbfc40b-0988-4601-b78e-c4f641303300/public",
     },
+     {
+        name: "Satish Kumar",
+        designation: "Manager – Accounts",
+        email: "accounts@leatherssc.org",
+        mobile: "7277239976",
+        linkedin: "",
+        image:
+            "https://imagedelivery.net/QG8_dZ1qAgTI1Cq9RSDiZg/65eeeae1-2f3a-4bad-671a-20a1ecfd3b00/public",
+    },
     {
         name: "Abhimanyu Kumar",
         designation: "Manager – IT",
@@ -64,15 +73,7 @@ const teamMembers = [
         image:
             "https://imagedelivery.net/QG8_dZ1qAgTI1Cq9RSDiZg/82f27cf8-318c-4ab2-cae4-2859df2ebf00/public",
     },
-    {
-        name: "Satish Kumar",
-        designation: "Manager – Accounts",
-        email: "accounts@leatherssc.org",
-        mobile: "7277239976",
-        linkedin: "",
-        image:
-            "https://imagedelivery.net/QG8_dZ1qAgTI1Cq9RSDiZg/65eeeae1-2f3a-4bad-671a-20a1ecfd3b00/public",
-    },
+   
 
     {
         name: "Neeraj Kumar Sharma",
