@@ -38,24 +38,6 @@ const teamMembers = [
             "https://imagedelivery.net/QG8_dZ1qAgTI1Cq9RSDiZg/b88456cd-f8c1-4c69-28d9-f31148b22700/public",
     },
     {
-        name: "Abhimanyu Kumar",
-        designation: "Manager – IT",
-        email: "it@leatherssc.org",
-        mobile: "9833040928",
-        linkedin: "https://linkedin.com/in/abhimanyu-kumar-98b94512b",
-        image:
-            "https://imagedelivery.net/QG8_dZ1qAgTI1Cq9RSDiZg/82f27cf8-318c-4ab2-cae4-2859df2ebf00/public",
-    },
-    {
-        name: "Satish Kumar",
-        designation: "Manager – Accounts",
-        email: "accounts@leatherssc.org",
-        mobile: "7277239976",
-        linkedin: "",
-        image:
-            "https://imagedelivery.net/QG8_dZ1qAgTI1Cq9RSDiZg/65eeeae1-2f3a-4bad-671a-20a1ecfd3b00/public",
-    },
-    {
         name: "Amit Shukla",
         designation: "Manager - Employer Relations",
         email: "amit@leatherssc.org",
@@ -73,6 +55,25 @@ const teamMembers = [
         image:
             "https://imagedelivery.net/QG8_dZ1qAgTI1Cq9RSDiZg/dbbfc40b-0988-4601-b78e-c4f641303300/public",
     },
+    {
+        name: "Abhimanyu Kumar",
+        designation: "Manager – IT",
+        email: "it@leatherssc.org",
+        mobile: "9833040928",
+        linkedin: "https://linkedin.com/in/abhimanyu-kumar-98b94512b",
+        image:
+            "https://imagedelivery.net/QG8_dZ1qAgTI1Cq9RSDiZg/82f27cf8-318c-4ab2-cae4-2859df2ebf00/public",
+    },
+    {
+        name: "Satish Kumar",
+        designation: "Manager – Accounts",
+        email: "accounts@leatherssc.org",
+        mobile: "7277239976",
+        linkedin: "",
+        image:
+            "https://imagedelivery.net/QG8_dZ1qAgTI1Cq9RSDiZg/65eeeae1-2f3a-4bad-671a-20a1ecfd3b00/public",
+    },
+
     {
         name: "Neeraj Kumar Sharma",
         designation:
@@ -155,7 +156,7 @@ const Team = () => {
                 {/* CEO CARD */}
                 <div className="flex justify-center mt-14 mb-16">
                     <div className="relative overflow-hidden rounded-3xl p-[1px] bg-gradient-to-br from-primary-400 via-primary-200 to-primary-600 max-w-sm w-full">
-                        <div className="bg-white rounded-3xl p-8 text-center relative">
+                        <div className="bg-white rounded-3xl p-1 text-center relative">
                             {/* GLOW */}
                             <div className="absolute top-0 left-0 w-full h-32 bg-primary-100 opacity-40 blur-3xl"></div>
                             {/* CEO IMAGE */}
