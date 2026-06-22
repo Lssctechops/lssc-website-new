@@ -55,6 +55,7 @@ export default function sitemap() {
       lastModified: formattedDate,
       priority: 0.64,
     },
+    
   ];
 
   return routes;

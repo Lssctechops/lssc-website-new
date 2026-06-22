@@ -110,7 +110,18 @@ export const menuItems = [
   //   route: "/training-map",
   //   submenu: [],
   // },
-  {
+//   {
+//   id: "7",
+//   label: "book",
+//   route: "/media",
+//   submenu: [
+//     {
+//   label: "ebook",
+//   route: "/media/ebook",
+// }
+//   ],
+// },
+{
     id: "112jkdbj5",
     label: "library",
     route: "/media",
@@ -129,6 +140,7 @@ export const menuItems = [
       },
     ],
   },
+  
   // {
   //   id: "5jguyg",
   //   label: "blog",

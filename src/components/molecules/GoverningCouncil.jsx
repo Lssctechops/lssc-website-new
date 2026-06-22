@@ -17,13 +17,13 @@ const GoverningCouncil = () => {
         "https://imagedelivery.net/QG8_dZ1qAgTI1Cq9RSDiZg/be5ec496-fd75-476a-775a-9ad008643e00/public",
       company: "CMD, Super House Ltd",
     },
-    {
-      name: "Shri P.R. Aqeel Ahmed",
-      designation: "Former Chairman, LSSC",
-      image:
-        "https://imagedelivery.net/QG8_dZ1qAgTI1Cq9RSDiZg/7daccee0-ed8d-4953-ad6e-028f92a98100/public",
-      company: "MD, Florence Shoe Company Pvt. Ltd",
-    },
+    // {
+    //   name: "Shri P.R. Aqeel Ahmed",
+    //   designation: "Former Chairman, LSSC",
+    //   image:
+    //     "https://imagedelivery.net/QG8_dZ1qAgTI1Cq9RSDiZg/7daccee0-ed8d-4953-ad6e-028f92a98100/public",
+    //   company: "MD, Florence Shoe Company Pvt. Ltd",
+    // },
     {
       name: "Shri Habib Hussain",
       designation: "Former Chairman, LSSC",
@@ -38,13 +38,13 @@ const GoverningCouncil = () => {
         "https://imagedelivery.net/QG8_dZ1qAgTI1Cq9RSDiZg/6de98bf3-d491-48c0-9af4-fab9faaa5700/public",
       company: "AFPL Global Pvt. Ltd.",
     },
-    {
-      name: "Shri Shri K.R. Vijayan",
-      designation: "Managing Director",
-      image:
-        "https://imagedelivery.net/QG8_dZ1qAgTI1Cq9RSDiZg/9ad50805-a20d-418b-f5e0-5068b4085900/public",
-      company: "Good Leather Shoes Pvt. Ltd.",
-    },
+    // {
+    //   name: "Shri Shri K.R. Vijayan",
+    //   designation: "Managing Director",
+    //   image:
+    //     "https://imagedelivery.net/QG8_dZ1qAgTI1Cq9RSDiZg/9ad50805-a20d-418b-f5e0-5068b4085900/public",
+    //   company: "Good Leather Shoes Pvt. Ltd.",
+    // },
  
     {
       name: "Shri Rakesh Suri",
@@ -179,13 +179,13 @@ const GoverningCouncil = () => {
     //     "https://imagedelivery.net/QG8_dZ1qAgTI1Cq9RSDiZg/6d31debd-05ce-4100-c6ce-4f742e4d8a00/public",
     //   company: "National Skill Development Corporation",
     // },
-    {
-      name: "Shri R. Selvam IAS",
-      designation: "Executive Director",
-      image:
-        "https://imagedelivery.net/QG8_dZ1qAgTI1Cq9RSDiZg/234388a5-26c3-4e09-ec51-5d67b2ea4900/public",
-      company: "Council for Leather Exports",
-    },
+    // {
+    //   name: "Shri R. Selvam IAS",
+    //   designation: "Executive Director",
+    //   image:
+    //     "https://imagedelivery.net/QG8_dZ1qAgTI1Cq9RSDiZg/234388a5-26c3-4e09-ec51-5d67b2ea4900/public",
+    //   company: "Council for Leather Exports",
+    // },
     {
   name: "Dr. P. Thanikaivelan",
   designation: "Director",
