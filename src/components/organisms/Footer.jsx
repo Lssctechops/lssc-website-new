@@ -288,10 +288,12 @@ const Footer = () => {
             technology are used for advertising. To learn more, visit AdChoices
             and our Privacy Policy.
           </div>
-
-          <Link href="https://www.webappgo.com" target="_blank">
-            Crafted with WebAppGo
-          </Link>
+          <div className="text-center text-sm text-muted-foreground leading-relaxed">
+            <p>© 2012 Leather Sector Skill Council. All Rights Reserved.</p>
+            <p className="mt-1">
+              Designed & Developed with ❤️ by LSSC IT Team
+            </p>
+          </div>
         </div>
       </div>
     </footer>
