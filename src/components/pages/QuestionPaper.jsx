@@ -174,104 +174,104 @@ const trainingMaterials = [
 ];
 
 const mockTestPapers = [
-  {
-    category: "Stitching Operator",
-    papers: [
-      {
-        label: "Stitching Operator_Mock_Paper_LSS_N5501",
-        route:
-          "https://drive.google.com/file/d/1Lsq1J3H8gNCprFUBMaTTP-hMog08zUFb/view?usp=sharing",
-      },
-      {
-        label: "Stitching Operator_Mock_Paper_LSS_N2202",
-        route:
-          "https://drive.google.com/file/d/1fi1lNtfBXdBxJJ8plgUQrBTxrxuZFhZj/view?usp=sharing",
-      },
-      {
-        label: "Stitching Operator_Mock_Paper_LSS_N2203",
-        route:
-          "https://drive.google.com/file/d/1qdS3_GVxDlPLsE-4S6DZsWotfxH4n-jW/view?usp=sharing",
-      },
-      {
-        label: "Stitching Operator_Mock_Paper_LSS_N2204",
-        route:
-          "https://drive.google.com/file/d/1ZmBsGvRHcaWyxzWdeSVeM6blf5JIEGns/view?usp=sharing",
-      },
-      {
-        label: "Stitching Operator_Mock_Paper_LSS_N5805",
-        route:
-          "https://drive.google.com/file/d/1hbj_I4llMX1mpa1f2wLGsqmqVWNiLvWC/view?usp=sharing",
-      },
-      {
-        label: "Stitching Operator_Mock_Paper_LSS_N8601",
-        route:
-          "https://drive.google.com/file/d/1oNdj-waHFyd-2ab26GFHYNbNPSmb4_b1/view?usp=sharing",
-      },
-      {
-        label: "Stitching Operator_Mock_Paper_DGT_VSQ_N0101",
-        route:
-          "https://drive.google.com/file/d/1fu46uhNRRG3CuYFAxqFMmEJM2xWP-AvN/view?usp=sharing",
-      },
-    ],
-  },
-  {
-    category: "Pre-Assembly Operator",
-    papers: [
-      {
-        label: "Pre-Assembly Operator-Mock_Paper_LSS_N2601",
-        route:
-          "https://drive.google.com/file/d/1qkANyhMCkELHf6F4XYmBhRfhAXlCVfKX/view?usp=sharing",
-      },
-      {
-        label: "Pre-Assembly Operator-Mock_Paper_LSS_N2603",
-        route:
-          "https://drive.google.com/file/d/1oCMJuK3ANxNx3mHmEe7P6Ld3k1p89lQT/view?usp=sharing",
-      },
-      {
-        label: "Pre-Assembly Operator-Mock_Paper_LSS_N2604",
-        route:
-          "https://drive.google.com/file/d/1FhQXL9DbENnj0HRLOzWctCu77ST08OcS/view?usp=sharing",
-      },
-      {
-        label: "Pre-Assembly Operator-Mock_Paper_LSS_N2606",
-        route:
-          "https://drive.google.com/file/d/1L4bSvr039wSnKza2QvU-DtnAGNd31QA1/view?usp=sharing",
-      },
-      {
-        label: "Pre-Assembly Operator-Mock_Paper_LSS_N2607",
-        route:
-          "https://drive.google.com/file/d/1lEb-KA4r67CNXwVKrInrrUIaG25jVVCa/view?usp=sharing",
-      },
-      {
-        label: "Pre-Assembly Operator-Mock_Paper_LSS_N2608",
-        route:
-          "https://drive.google.com/file/d/1MPwoBPQrB4fZCClDW2gzCTlKhrhyPdDW/view?usp=sharing",
-      },
-      {
-        label: "Pre-Assembly Operator-Mock_Paper_LSS_N2609",
-        route:
-          "https://drive.google.com/file/d/1G2GwZTG8wOteDSUFHI6nGsQ4lIEgtN7W/view?usp=sharing",
-      },
-      {
-        label: "Pre-Assembly Operator-Mock_Paper_LSS_N2610",
-        route:
-          "https://drive.google.com/file/d/1pWc6HObtxnTbOmLQjovSuwAfeXTdflj-/view?usp=sharing",
-      },
-      {
-        label: "Pre-Assembly Operator-Mock_Paper_LSS_N3006",
-        route:
-          "https://drive.google.com/file/d/118qOtFGScU3cjPKsuoHdrVSRgGf1XwGm/view?usp=sharing",
-      },
-      {
-        label: "Pre-Assembly Operator-Mock_Paper_LSS_N8601",
-        route:
-          "https://drive.google.com/file/d/17wau0ToD_IrslvUMHkXWF_HGAS42jZ_E/view?usp=sharing",
-      },
-      {
-        label: "Pre-Assembly Operator-Mock_Paper_DGT_VSQ_N0101",
-        route:
-          "https://drive.google.com/file/d/19lAuRKacQg4BSpP3VmwTaad4XbO-vl4_/view?usp=sharing",
-      },
-    ],
-  },
+  // {
+  //   category: "Stitching Operator",
+  //   papers: [
+  //     {
+  //       label: "Stitching Operator_Mock_Paper_LSS_N5501",
+  //       route:
+  //         "https://drive.google.com/file/d/1Lsq1J3H8gNCprFUBMaTTP-hMog08zUFb/view?usp=sharing",
+  //     },
+  //     {
+  //       label: "Stitching Operator_Mock_Paper_LSS_N2202",
+  //       route:
+  //         "https://drive.google.com/file/d/1fi1lNtfBXdBxJJ8plgUQrBTxrxuZFhZj/view?usp=sharing",
+  //     },
+  //     {
+  //       label: "Stitching Operator_Mock_Paper_LSS_N2203",
+  //       route:
+  //         "https://drive.google.com/file/d/1qdS3_GVxDlPLsE-4S6DZsWotfxH4n-jW/view?usp=sharing",
+  //     },
+  //     {
+  //       label: "Stitching Operator_Mock_Paper_LSS_N2204",
+  //       route:
+  //         "https://drive.google.com/file/d/1ZmBsGvRHcaWyxzWdeSVeM6blf5JIEGns/view?usp=sharing",
+  //     },
+  //     {
+  //       label: "Stitching Operator_Mock_Paper_LSS_N5805",
+  //       route:
+  //         "https://drive.google.com/file/d/1hbj_I4llMX1mpa1f2wLGsqmqVWNiLvWC/view?usp=sharing",
+  //     },
+  //     {
+  //       label: "Stitching Operator_Mock_Paper_LSS_N8601",
+  //       route:
+  //         "https://drive.google.com/file/d/1oNdj-waHFyd-2ab26GFHYNbNPSmb4_b1/view?usp=sharing",
+  //     },
+  //     {
+  //       label: "Stitching Operator_Mock_Paper_DGT_VSQ_N0101",
+  //       route:
+  //         "https://drive.google.com/file/d/1fu46uhNRRG3CuYFAxqFMmEJM2xWP-AvN/view?usp=sharing",
+  //     },
+  //   ],
+  // },
+  // {
+  //   category: "Pre-Assembly Operator",
+  //   papers: [
+  //     {
+  //       label: "Pre-Assembly Operator-Mock_Paper_LSS_N2601",
+  //       route:
+  //         "https://drive.google.com/file/d/1qkANyhMCkELHf6F4XYmBhRfhAXlCVfKX/view?usp=sharing",
+  //     },
+  //     {
+  //       label: "Pre-Assembly Operator-Mock_Paper_LSS_N2603",
+  //       route:
+  //         "https://drive.google.com/file/d/1oCMJuK3ANxNx3mHmEe7P6Ld3k1p89lQT/view?usp=sharing",
+  //     },
+  //     {
+  //       label: "Pre-Assembly Operator-Mock_Paper_LSS_N2604",
+  //       route:
+  //         "https://drive.google.com/file/d/1FhQXL9DbENnj0HRLOzWctCu77ST08OcS/view?usp=sharing",
+  //     },
+  //     {
+  //       label: "Pre-Assembly Operator-Mock_Paper_LSS_N2606",
+  //       route:
+  //         "https://drive.google.com/file/d/1L4bSvr039wSnKza2QvU-DtnAGNd31QA1/view?usp=sharing",
+  //     },
+  //     {
+  //       label: "Pre-Assembly Operator-Mock_Paper_LSS_N2607",
+  //       route:
+  //         "https://drive.google.com/file/d/1lEb-KA4r67CNXwVKrInrrUIaG25jVVCa/view?usp=sharing",
+  //     },
+  //     {
+  //       label: "Pre-Assembly Operator-Mock_Paper_LSS_N2608",
+  //       route:
+  //         "https://drive.google.com/file/d/1MPwoBPQrB4fZCClDW2gzCTlKhrhyPdDW/view?usp=sharing",
+  //     },
+  //     {
+  //       label: "Pre-Assembly Operator-Mock_Paper_LSS_N2609",
+  //       route:
+  //         "https://drive.google.com/file/d/1G2GwZTG8wOteDSUFHI6nGsQ4lIEgtN7W/view?usp=sharing",
+  //     },
+  //     {
+  //       label: "Pre-Assembly Operator-Mock_Paper_LSS_N2610",
+  //       route:
+  //         "https://drive.google.com/file/d/1pWc6HObtxnTbOmLQjovSuwAfeXTdflj-/view?usp=sharing",
+  //     },
+  //     {
+  //       label: "Pre-Assembly Operator-Mock_Paper_LSS_N3006",
+  //       route:
+  //         "https://drive.google.com/file/d/118qOtFGScU3cjPKsuoHdrVSRgGf1XwGm/view?usp=sharing",
+  //     },
+  //     {
+  //       label: "Pre-Assembly Operator-Mock_Paper_LSS_N8601",
+  //       route:
+  //         "https://drive.google.com/file/d/17wau0ToD_IrslvUMHkXWF_HGAS42jZ_E/view?usp=sharing",
+  //     },
+  //     {
+  //       label: "Pre-Assembly Operator-Mock_Paper_DGT_VSQ_N0101",
+  //       route:
+  //         "https://drive.google.com/file/d/19lAuRKacQg4BSpP3VmwTaad4XbO-vl4_/view?usp=sharing",
+  //     },
+  //   ],
+  // },
 ];

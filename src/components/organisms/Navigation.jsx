@@ -67,7 +67,7 @@ const Navigation = () => {
             </div>
           );
         })}
-        <Link href="/media/ebook" className="glow-btn">
+        {/* <Link href="/media/ebook" className="glow-btn">
           <span className="glow-btn-inner">LMS</span>
         </Link>
         <Link
@@ -78,7 +78,7 @@ const Navigation = () => {
         >
           <span className="glow-btn-inner">Manpower Requirement</span>
 
-        </Link>
+        </Link> */}
         <Link href="/job-post">
           <button className="px-4 py-1 cursor-pointer bg-gradient-to-r from-[#7B0C0A] to-[#420705] text-white text-[1rem] rounded-[4px]">
             Talent Bank

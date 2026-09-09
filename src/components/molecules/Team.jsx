@@ -122,13 +122,13 @@ const teamMembers = [
             "https://imagedelivery.net/QG8_dZ1qAgTI1Cq9RSDiZg/0e74893a-f2c6-4098-bc57-4928836d9300/public",
     },
     {
-        name: "Dhivakaran",
-        designation: "Executive",
+        name: "Arun Kumar",
+        designation: "Executive Assistant",
         email: "lssc@leatherssc.org",
-        mobile: "9994441917",
-        linkedin: "",
+        mobile: " 9360132934",
+        linkedin: "https://www.linkedin.com/in/arun-kumar-b0a862320/",
         image:
-            "https://imagedelivery.net/QG8_dZ1qAgTI1Cq9RSDiZg/c5131a7a-0c5b-4f63-a395-ce038b5cbb00/public",
+            "https://imagedelivery.net/QG8_dZ1qAgTI1Cq9RSDiZg/f1e65dc1-0fd1-4b88-5db9-04d4a324e100/public",
     },
 ];
 const Team = () => {
