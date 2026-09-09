@@ -153,7 +153,7 @@ export default function MobileSidebar({ logo, isProfessional = false }) {
                 </div>
               );
             })}
-            <Link href="/media/ebook" className="glow-btn">
+            {/* <Link href="/media/ebook" className="glow-btn">
               <span className="glow-btn-inner">LMS</span>
             </Link>
             <Link
@@ -164,7 +164,7 @@ export default function MobileSidebar({ logo, isProfessional = false }) {
             >
               <span className="glow-btn-inner">Manpower Requirement</span>
 
-            </Link>
+            </Link> */}
             {/* Talent Bank Button */}
             <Link href="/job-post">
               <button className="px-4 py-2 w-full bg-gradient-to-r from-[#7B0C0A] to-[#420705] text-white text-[1rem] rounded-[4px]">
