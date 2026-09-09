@@ -400,3 +400,52 @@ td {
 .skiptranslate {
   display: none !important;
 }
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+@keyframes border-spin {
+  to { --angle: 360deg; }
+}
+
+.glow-btn {
+  position: relative;
+  display: inline-block;
+  border-radius: 9999px;
+  padding: 2px;
+  background: conic-gradient(
+    from var(--angle),
+    transparent 0deg,
+    #ff0000 40deg,
+    #b20000 80deg,
+    #ff0000 120deg,
+    #2831B4 160deg,
+    #1E7DF5 200deg,
+    #0D88B7 240deg,
+    transparent 300deg
+  );
+  animation: border-spin 3s linear infinite;
+}
+
+.glow-btn::after {
+  content: "";
+  position: absolute;
+  inset: -6px;
+  border-radius: 9999px;
+  background: inherit;
+  filter: blur(14px);
+  opacity: 0.6;
+  z-index: -1;
+}
+
+.glow-btn-inner {
+  display: block;
+  border-radius: 9999px;
+  background: linear-gradient(to right, #190834, #12092C);
+  padding: 0.35rem 1.25rem;
+  color: #fff;
+  font-size: 1rem;
+  line-height: 1.5;
+}

@@ -535,3 +535,732 @@ const jobRoles = [
     value: "junior_technician_footwear_components_testing",
   },
 ];
+
+
+// "use client";
+
+// import axios from "axios";
+// import { useRouter } from "next/navigation";
+// import { useState } from "react";
+// import { errorToast } from "~/utils/toastMessage";
+
+// const jobRoleRows = [
+//   "Cutting Operator",
+//   "Stitching Operator",
+//   "Lasting Operator",
+//   "Finishing Operator",
+//   "Pre-Assembly Line Operator",
+//   "Skiving Operator",
+//   "Helper Parts Making",
+//   "Helper Upper Making",
+//   "Helper Bottom Making",
+//   "Line Supervisors",
+//   "Quality Checking",
+//   "Others (Specify)",
+// ];
+
+// const skillLevels = ["Fresher", "Semi-skilled", "Skilled"];
+
+// const CandidateForm = () => {
+//   const [error, setError] = useState({});
+//   const [loading, setLoading] = useState(false);
+//   const router = useRouter();
+
+//   const [formData, setFormData] = useState({
+//     date: "",
+//     // 1. Company Details
+//     companyName: "",
+//     plantLocations: "",
+//     contactPerson: "",
+//     designation: "",
+//     mobile: "",
+//     email: "",
+//     // 2. Manpower Requirement
+//     manpower: jobRoleRows.map((role) => ({
+//       role,
+//       count: "",
+//       skillLevel: "",
+//       othersSpecify: "",
+//     })),
+//     totalRequirement: "",
+//     expectedDeployment: "",
+//     natureOfEmployment: "",
+//     // 3. Qualification & Training
+//     minQualification: "",
+//     inductionOjt: "",
+//     specificSkill: "",
+//     // 4. Salary & Benefits
+//     salaryUnskilled: "",
+//     salarySemiSkilled: "",
+//     salarySkilled: "",
+//     // 5. Statutory Compliance & Welfare
+//     epf: "",
+//     esi: "",
+//     additionalInsurance: "",
+//     // 6. Accommodation, Food & Transportation
+//     accommodation: "",
+//     foodCanteen: "",
+//     foodCharges: "",
+//     travelExpenses: "",
+//     railwayFareReimbursement: "",
+//     pickupFacility: "",
+//     relocationSupport: "",
+//     // 7. Working Conditions
+//     workingHours: "",
+//     shiftPattern: "",
+//     weeklyOff: "",
+//     leaveEntitlements: "",
+//     ppeSafety: "",
+//     // 8. Declaration
+//     authName: "",
+//     authDesignation: "",
+//   });
+
+//   const handleChange = (event) => {
+//     const { name, value } = event.target;
+//     setError({});
+//     setFormData((prev) => ({ ...prev, [name]: value }));
+//   };
+
+//   const handleManpowerChange = (index, field, value) => {
+//     setFormData((prev) => {
+//       const manpower = [...prev.manpower];
+//       manpower[index] = { ...manpower[index], [field]: value };
+//       return { ...prev, manpower };
+//     });
+//   };
+
+//   const handleSubmit = async (e) => {
+//     e.preventDefault();
+//     setLoading(true);
+//     setError({});
+//     try {
+//       const response = await axios({
+//         url: `${process.env.NEXT_PUBLIC_API_URL}/api/public/talentForm`,
+//         method: "POST",
+//         data: formData,
+//       });
+//       setLoading(false);
+//       const industryId = response?.data?.data?._id;
+//       router.replace(`/job-post/collaboration-form?industry=${industryId}`);
+//     } catch (err) {
+//       const { message } = err?.response?.data || {};
+//       setError(err?.response?.data || {});
+//       errorToast(message || "Failed to submit the form.");
+//       setLoading(false);
+//     }
+//   };
+
+//   const inputCls =
+//     "bg-white border border-gray-200 p-3 rounded-lg w-full";
+//   const labelCls = "font-medium text-lg block mb-1";
+//   const sectionCls = "col-span-2 mt-4";
+//   const sectionTitleCls =
+//     "text-xl font-semibold text-[#0070BA] mb-3 border-b border-[#0070BA]/30 pb-1";
+
+//   return (
+//     <section>
+//       <h2 className="text-center mx-auto font-bold text-[#333333] mb-2 text-3xl lg:text-4xl">
+//         MANPOWER REQUIREMENT FORM
+//       </h2>
+//       <h3 className="text-xl mb-6 text-center text-[#333333] font-medium">
+//         ( To be filled by Industry )
+//       </h3>
+
+//       <form
+//         onSubmit={handleSubmit}
+//         style={{ boxShadow: "0px 12px 48px 0px #00000014" }}
+//         className="lg:w-[80%] grid grid-cols-1 md:grid-cols-2 gap-4 p-4 lg:p-8 bg-[#EBF4FA] rounded-2xl mx-auto"
+//       >
+//         {/* Date */}
+//         <div className="col-span-2 flex justify-end">
+//           <div className="flex items-center gap-2">
+//             <label className="font-medium">Date:</label>
+//             <input
+//               type="date"
+//               name="date"
+//               value={formData.date}
+//               onChange={handleChange}
+//               className="bg-white border border-gray-200 p-2 rounded-lg"
+//             />
+//           </div>
+//         </div>
+
+//         {/* 1. Company Details */}
+//         <div className={sectionCls}>
+//           <h4 className={sectionTitleCls}>1. Company Details</h4>
+//         </div>
+
+//         <div className="col-span-2">
+//           <label className={labelCls}>Company Name</label>
+//           <input
+//             required
+//             name="companyName"
+//             value={formData.companyName}
+//             onChange={handleChange}
+//             className={inputCls}
+//             placeholder="Company's name"
+//           />
+//         </div>
+
+//         <div className="col-span-2">
+//           <label className={labelCls}>Plant/Unit Location(s)</label>
+//           <input
+//             required
+//             name="plantLocations"
+//             value={formData.plantLocations}
+//             onChange={handleChange}
+//             className={inputCls}
+//             placeholder="Enter plant/unit location(s)"
+//           />
+//         </div>
+
+//         <div>
+//           <label className={labelCls}>Contact Person (HR)</label>
+//           <input
+//             required
+//             name="contactPerson"
+//             value={formData.contactPerson}
+//             onChange={handleChange}
+//             className={inputCls}
+//             placeholder="Contact person name"
+//           />
+//         </div>
+
+//         <div>
+//           <label className={labelCls}>Designation</label>
+//           <input
+//             name="designation"
+//             value={formData.designation}
+//             onChange={handleChange}
+//             className={inputCls}
+//             placeholder="Designation"
+//           />
+//         </div>
+
+//         <div>
+//           <label className={labelCls}>Mobile</label>
+//           <input
+//             required
+//             name="mobile"
+//             value={formData.mobile}
+//             onChange={handleChange}
+//             className={inputCls}
+//             placeholder="Mobile number"
+//           />
+//         </div>
+
+//         <div>
+//           <label className={labelCls}>Email</label>
+//           <input
+//             required
+//             type="email"
+//             name="email"
+//             value={formData.email}
+//             onChange={handleChange}
+//             className={inputCls}
+//             placeholder="Email address"
+//           />
+//         </div>
+
+//         {/* 2. Manpower Requirement */}
+//         <div className={sectionCls}>
+//           <h4 className={sectionTitleCls}>2. Manpower Requirement</h4>
+//           <div className="overflow-x-auto">
+//             <table className="w-full border-collapse bg-white rounded-lg overflow-hidden">
+//               <thead>
+//                 <tr className="bg-[#0070BA] text-white text-left">
+//                   <th className="p-3">Job Role</th>
+//                   <th className="p-3">No. of Workers Required</th>
+//                   <th className="p-3">Fresher / Semi-skilled / Skilled</th>
+//                 </tr>
+//               </thead>
+//               <tbody>
+//                 {formData.manpower.map((row, i) => (
+//                   <tr key={i} className="border-b border-gray-100">
+//                     <td className="p-2 align-top">
+//                       {row.role === "Others (Specify)" ? (
+//                         <div className="flex flex-col gap-1">
+//                           <span>Others (Specify)</span>
+//                           <input
+//                             value={row.othersSpecify}
+//                             onChange={(e) =>
+//                               handleManpowerChange(i, "othersSpecify", e.target.value)
+//                             }
+//                             className="border border-gray-200 p-2 rounded-lg text-sm"
+//                             placeholder="Specify role"
+//                           />
+//                         </div>
+//                       ) : (
+//                         row.role
+//                       )}
+//                     </td>
+//                     <td className="p-2">
+//                       <input
+//                         type="number"
+//                         min="0"
+//                         value={row.count}
+//                         onChange={(e) =>
+//                           handleManpowerChange(i, "count", e.target.value)
+//                         }
+//                         className="border border-gray-200 p-2 rounded-lg w-24"
+//                       />
+//                     </td>
+//                     <td className="p-2">
+//                       <select
+//                         value={row.skillLevel}
+//                         onChange={(e) =>
+//                           handleManpowerChange(i, "skillLevel", e.target.value)
+//                         }
+//                         className="border border-gray-200 p-2 rounded-lg"
+//                       >
+//                         <option value="">Select</option>
+//                         {skillLevels.map((s) => (
+//                           <option key={s} value={s}>
+//                             {s}
+//                           </option>
+//                         ))}
+//                       </select>
+//                     </td>
+//                   </tr>
+//                 ))}
+//               </tbody>
+//             </table>
+//           </div>
+//         </div>
+
+//         <div>
+//           <label className={labelCls}>Total Requirement (Workers)</label>
+//           <input
+//             type="number"
+//             min="0"
+//             name="totalRequirement"
+//             value={formData.totalRequirement}
+//             onChange={handleChange}
+//             className={inputCls}
+//             placeholder="Total workers"
+//           />
+//         </div>
+
+//         <div>
+//           <label className={labelCls}>Expected Date of Deployment</label>
+//           <input
+//             type="date"
+//             name="expectedDeployment"
+//             value={formData.expectedDeployment}
+//             onChange={handleChange}
+//             className={inputCls}
+//           />
+//         </div>
+
+//         <div className="col-span-2">
+//           <label className={labelCls}>Nature of Employment</label>
+//           <div className="flex flex-wrap gap-4">
+//             {["Contractual", "Fixed-Term", "Permanent"].map((opt) => (
+//               <label key={opt} className="flex items-center gap-2">
+//                 <input
+//                   type="radio"
+//                   name="natureOfEmployment"
+//                   value={opt}
+//                   checked={formData.natureOfEmployment === opt}
+//                   onChange={handleChange}
+//                 />
+//                 {opt}
+//               </label>
+//             ))}
+//           </div>
+//         </div>
+
+//         {/* 3. Qualification & Training */}
+//         <div className={sectionCls}>
+//           <h4 className={sectionTitleCls}>3. Qualification & Training</h4>
+//         </div>
+
+//         <div className="col-span-2">
+//           <label className={labelCls}>Minimum Educational Qualification</label>
+//           <input
+//             name="minQualification"
+//             value={formData.minQualification}
+//             onChange={handleChange}
+//             className={inputCls}
+//             placeholder="Minimum qualification"
+//           />
+//         </div>
+
+//         <div>
+//           <label className={labelCls}>Company will provide Induction/OJT</label>
+//           <div className="flex gap-4">
+//             {["Yes", "No"].map((opt) => (
+//               <label key={opt} className="flex items-center gap-2">
+//                 <input
+//                   type="radio"
+//                   name="inductionOjt"
+//                   value={opt}
+//                   checked={formData.inductionOjt === opt}
+//                   onChange={handleChange}
+//                 />
+//                 {opt}
+//               </label>
+//             ))}
+//           </div>
+//         </div>
+
+//         <div>
+//           <label className={labelCls}>Any Specific Skill Requirement</label>
+//           <input
+//             name="specificSkill"
+//             value={formData.specificSkill}
+//             onChange={handleChange}
+//             className={inputCls}
+//             placeholder="Specific skill"
+//           />
+//         </div>
+
+//         {/* 4. Salary & Benefits */}
+//         <div className={sectionCls}>
+//           <h4 className={sectionTitleCls}>4. Salary & Benefits</h4>
+//           <p className="text-sm text-gray-600 mb-2">
+//             Monthly Salary/Wages Offered
+//           </p>
+//         </div>
+
+//         <div>
+//           <label className={labelCls}>Unskilled (₹)</label>
+//           <input
+//             type="number"
+//             name="salaryUnskilled"
+//             value={formData.salaryUnskilled}
+//             onChange={handleChange}
+//             className={inputCls}
+//             placeholder="₹"
+//           />
+//         </div>
+
+//         <div>
+//           <label className={labelCls}>Semi-skilled (₹)</label>
+//           <input
+//             type="number"
+//             name="salarySemiSkilled"
+//             value={formData.salarySemiSkilled}
+//             onChange={handleChange}
+//             className={inputCls}
+//             placeholder="₹"
+//           />
+//         </div>
+
+//         <div>
+//           <label className={labelCls}>Skilled (₹)</label>
+//           <input
+//             type="number"
+//             name="salarySkilled"
+//             value={formData.salarySkilled}
+//             onChange={handleChange}
+//             className={inputCls}
+//             placeholder="₹"
+//           />
+//         </div>
+
+//         {/* 5. Statutory Compliance & Welfare */}
+//         <div className={sectionCls}>
+//           <h4 className={sectionTitleCls}>
+//             5. Statutory Compliance & Welfare
+//           </h4>
+//         </div>
+
+//         <div>
+//           <label className={labelCls}>EPF</label>
+//           <div className="flex gap-4">
+//             {["Yes", "No"].map((opt) => (
+//               <label key={opt} className="flex items-center gap-2">
+//                 <input
+//                   type="radio"
+//                   name="epf"
+//                   value={opt}
+//                   checked={formData.epf === opt}
+//                   onChange={handleChange}
+//                 />
+//                 {opt}
+//               </label>
+//             ))}
+//           </div>
+//         </div>
+
+//         <div>
+//           <label className={labelCls}>ESI</label>
+//           <div className="flex gap-4">
+//             {["Yes", "No"].map((opt) => (
+//               <label key={opt} className="flex items-center gap-2">
+//                 <input
+//                   type="radio"
+//                   name="esi"
+//                   value={opt}
+//                   checked={formData.esi === opt}
+//                   onChange={handleChange}
+//                 />
+//                 {opt}
+//               </label>
+//             ))}
+//           </div>
+//         </div>
+
+//         <div className="col-span-2">
+//           <label className={labelCls}>
+//             Additional Insurance/Medical Coverage
+//           </label>
+//           <input
+//             name="additionalInsurance"
+//             value={formData.additionalInsurance}
+//             onChange={handleChange}
+//             className={inputCls}
+//             placeholder="Details"
+//           />
+//         </div>
+
+//         {/* 6. Accommodation, Food & Transportation */}
+//         <div className={sectionCls}>
+//           <h4 className={sectionTitleCls}>
+//             6. Accommodation, Food & Transportation
+//           </h4>
+//         </div>
+
+//         <div className="col-span-2">
+//           <label className={labelCls}>Accommodation Provided</label>
+//           <div className="flex flex-wrap gap-4">
+//             {["Free", "Paid", "Not Provided"].map((opt) => (
+//               <label key={opt} className="flex items-center gap-2">
+//                 <input
+//                   type="radio"
+//                   name="accommodation"
+//                   value={opt}
+//                   checked={formData.accommodation === opt}
+//                   onChange={handleChange}
+//                 />
+//                 {opt}
+//               </label>
+//             ))}
+//           </div>
+//         </div>
+
+//         <div>
+//           <label className={labelCls}>Food/Canteen Facility</label>
+//           <div className="flex gap-4">
+//             {["Yes", "No"].map((opt) => (
+//               <label key={opt} className="flex items-center gap-2">
+//                 <input
+//                   type="radio"
+//                   name="foodCanteen"
+//                   value={opt}
+//                   checked={formData.foodCanteen === opt}
+//                   onChange={handleChange}
+//                 />
+//                 {opt}
+//               </label>
+//             ))}
+//           </div>
+//         </div>
+
+//         <div>
+//           <label className={labelCls}>Food Charges (₹ per month, if any)</label>
+//           <input
+//             type="number"
+//             name="foodCharges"
+//             value={formData.foodCharges}
+//             onChange={handleChange}
+//             className={inputCls}
+//             placeholder="₹ per month"
+//           />
+//         </div>
+
+//         <div className="col-span-2">
+//           <label className={labelCls}>Travel Expenses from Home State</label>
+//           <div className="flex flex-wrap gap-4">
+//             {["Company Pays", "Candidate Pays"].map((opt) => (
+//               <label key={opt} className="flex items-center gap-2">
+//                 <input
+//                   type="radio"
+//                   name="travelExpenses"
+//                   value={opt}
+//                   checked={formData.travelExpenses === opt}
+//                   onChange={handleChange}
+//                 />
+//                 {opt}
+//               </label>
+//             ))}
+//           </div>
+//         </div>
+
+//         <div>
+//           <label className={labelCls}>Railway Fare Reimbursement</label>
+//           <div className="flex gap-4">
+//             {["Yes", "No"].map((opt) => (
+//               <label key={opt} className="flex items-center gap-2">
+//                 <input
+//                   type="radio"
+//                   name="railwayFareReimbursement"
+//                   value={opt}
+//                   checked={formData.railwayFareReimbursement === opt}
+//                   onChange={handleChange}
+//                 />
+//                 {opt}
+//               </label>
+//             ))}
+//           </div>
+//         </div>
+
+//         <div>
+//           <label className={labelCls}>Pick-up Facility from Railway Station</label>
+//           <div className="flex gap-4">
+//             {["Yes", "No"].map((opt) => (
+//               <label key={opt} className="flex items-center gap-2">
+//                 <input
+//                   type="radio"
+//                   name="pickupFacility"
+//                   value={opt}
+//                   checked={formData.pickupFacility === opt}
+//                   onChange={handleChange}
+//                 />
+//                 {opt}
+//               </label>
+//             ))}
+//           </div>
+//         </div>
+
+//         <div className="col-span-2">
+//           <label className={labelCls}>Relocation Support</label>
+//           <div className="flex gap-4">
+//             {["Yes", "No"].map((opt) => (
+//               <label key={opt} className="flex items-center gap-2">
+//                 <input
+//                   type="radio"
+//                   name="relocationSupport"
+//                   value={opt}
+//                   checked={formData.relocationSupport === opt}
+//                   onChange={handleChange}
+//                 />
+//                 {opt}
+//               </label>
+//             ))}
+//           </div>
+//         </div>
+
+//         {/* 7. Working Conditions */}
+//         <div className={sectionCls}>
+//           <h4 className={sectionTitleCls}>7. Working Conditions</h4>
+//         </div>
+
+//         <div>
+//           <label className={labelCls}>Working Hours</label>
+//           <input
+//             name="workingHours"
+//             value={formData.workingHours}
+//             onChange={handleChange}
+//             className={inputCls}
+//             placeholder="e.g. 8 hours/day"
+//           />
+//         </div>
+
+//         <div>
+//           <label className={labelCls}>Shift Pattern</label>
+//           <input
+//             name="shiftPattern"
+//             value={formData.shiftPattern}
+//             onChange={handleChange}
+//             className={inputCls}
+//             placeholder="Shift pattern"
+//           />
+//         </div>
+
+//         <div>
+//           <label className={labelCls}>Weekly Off</label>
+//           <input
+//             name="weeklyOff"
+//             value={formData.weeklyOff}
+//             onChange={handleChange}
+//             className={inputCls}
+//             placeholder="Weekly off"
+//           />
+//         </div>
+
+//         <div>
+//           <label className={labelCls}>Leave Entitlements</label>
+//           <input
+//             name="leaveEntitlements"
+//             value={formData.leaveEntitlements}
+//             onChange={handleChange}
+//             className={inputCls}
+//             placeholder="Leave entitlements"
+//           />
+//         </div>
+
+//         <div className="col-span-2">
+//           <label className={labelCls}>PPE & Safety Measures Available</label>
+//           <div className="flex gap-4">
+//             {["Yes", "No"].map((opt) => (
+//               <label key={opt} className="flex items-center gap-2">
+//                 <input
+//                   type="radio"
+//                   name="ppeSafety"
+//                   value={opt}
+//                   checked={formData.ppeSafety === opt}
+//                   onChange={handleChange}
+//                 />
+//                 {opt}
+//               </label>
+//             ))}
+//           </div>
+//         </div>
+
+//         {/* 8. Declaration */}
+//         <div className={sectionCls}>
+//           <h4 className={sectionTitleCls}>8. Declaration</h4>
+//           <p className="text-sm text-gray-600 mb-3">
+//             We hereby confirm the above manpower requirement and request Leather
+//             Sector Skill Council (LSSC) to support sourcing and mobilization
+//             activities.
+//           </p>
+//         </div>
+
+//         <div>
+//           <label className={labelCls}>Authorized Signatory — Name</label>
+//           <input
+//             required
+//             name="authName"
+//             value={formData.authName}
+//             onChange={handleChange}
+//             className={inputCls}
+//             placeholder="Name"
+//           />
+//         </div>
+
+//         <div>
+//           <label className={labelCls}>Designation</label>
+//           <input
+//             name="authDesignation"
+//             value={formData.authDesignation}
+//             onChange={handleChange}
+//             className={inputCls}
+//             placeholder="Designation"
+//           />
+//         </div>
+
+//         {error?.error && (
+//           <span className="col-span-2 text-xs text-red-500">
+//             {error.error}
+//           </span>
+//         )}
+
+//         <div className="flex col-span-2 items-center justify-center">
+//           <button
+//             disabled={loading}
+//             type="submit"
+//             className="bg-[#0070BA] disabled:opacity-50 py-4 mt-6 mx-auto w-full lg:w-fit lg:px-40 text-white rounded-xl"
+//           >
+//             Submit Form
+//           </button>
+//         </div>
+//       </form>
+//     </section>
+//   );
+// };
+
+// export default CandidateForm;

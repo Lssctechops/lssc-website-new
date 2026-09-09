@@ -62,17 +62,15 @@ export default function MobileSidebar({ logo, isProfessional = false }) {
 
       {/* Backdrop */}
       <div
-        className={`fixed inset-0 bg-black/20  z-[999] transition-opacity duration-300 backdrop-blur-[1px] ${
-          isOpen ? "opacity-100" : "opacity-0 pointer-events-none"
-        }`}
+        className={`fixed inset-0 bg-black/20  z-[999] transition-opacity duration-300 backdrop-blur-[1px] ${isOpen ? "opacity-100" : "opacity-0 pointer-events-none"
+          }`}
       />
 
       {/* Sidebar */}
       <div
         ref={sidebarRef}
-        className={`fixed top-0 left-0 h-full w-[65%] bg-primary-600 z-[999] transform transition-transform duration-300 ease-in-out ${
-          isOpen ? "translate-x-0" : "-translate-x-full"
-        }`}
+        className={`fixed top-0 left-0 h-full w-[65%] bg-primary-600 z-[999] transform transition-transform duration-300 ease-in-out ${isOpen ? "translate-x-0" : "-translate-x-full"
+          }`}
       >
         {/* Sidebar Header with Logo and Close Button */}
         <div className="flex items-center justify-between p-4 border-b border-white/10">
@@ -113,10 +111,9 @@ export default function MobileSidebar({ logo, isProfessional = false }) {
                       </Link>
                       {submenu?.length > 0 && (
                         <span
-                          className={`text-xl ${
-                            dropdownId == id &&
+                          className={`text-xl ${dropdownId == id &&
                             "rotate-180 transition-all duration-300"
-                          }`}
+                            }`}
                         >
                           <MdKeyboardArrowDown />
                         </span>
@@ -126,9 +123,8 @@ export default function MobileSidebar({ logo, isProfessional = false }) {
 
                   {dropdownId == id && submenu?.length > 0 && (
                     <div
-                      className={`w-full mt-2 ${
-                        menuItems?.length - 1 == index && "right-0"
-                      }`}
+                      className={`w-full mt-2 ${menuItems?.length - 1 == index && "right-0"
+                        }`}
                     >
                       <div className="w-full capitalize flex flex-col bg-white shadow rounded-[0.375rem] overflow-hidden">
                         {submenu?.map((values, index) => {
@@ -157,7 +153,18 @@ export default function MobileSidebar({ logo, isProfessional = false }) {
                 </div>
               );
             })}
+            <Link href="/media/ebook" className="glow-btn">
+              <span className="glow-btn-inner">LMS</span>
+            </Link>
+            <Link
+              href="https://lssc-industry-demand-registration-portal-3g5j924up.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="glow-btn"
+            >
+              <span className="glow-btn-inner">Manpower Requirement</span>
 
+            </Link>
             {/* Talent Bank Button */}
             <Link href="/job-post">
               <button className="px-4 py-2 w-full bg-gradient-to-r from-[#7B0C0A] to-[#420705] text-white text-[1rem] rounded-[4px]">

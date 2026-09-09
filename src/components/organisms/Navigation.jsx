@@ -30,10 +30,9 @@ const Navigation = () => {
                   </span>
                   {submenu?.length > 0 && (
                     <span
-                      className={`text-xl ${
-                        dropdownId == id &&
+                      className={`text-xl ${dropdownId == id &&
                         "rotate-180 transition-all duration-300"
-                      }`}
+                        }`}
                     >
                       <MdKeyboardArrowDown />
                     </span>
@@ -43,9 +42,8 @@ const Navigation = () => {
 
               {dropdownId == id && submenu?.length > 0 && (
                 <div
-                  className={`absolute top-5 pt-1.5 z-[99] w-[13rem] ${
-                    menuItems?.length - 1 == index && "right-0"
-                  }`}
+                  className={`absolute top-5 pt-1.5 z-[99] w-[13rem] ${menuItems?.length - 1 == index && "right-0"
+                    }`}
                 >
                   <div className="w-full capitalize flex flex-col bg-[#C3DB9A]  shadow rounded-[0.375rem] overflow-hidden">
                     {submenu?.map((values, index) => {
@@ -69,7 +67,18 @@ const Navigation = () => {
             </div>
           );
         })}
+        <Link href="/media/ebook" className="glow-btn">
+          <span className="glow-btn-inner">LMS</span>
+        </Link>
+        <Link
+          href="https://lssc-industry-demand-registration-portal-3g5j924up.vercel.app/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="glow-btn"
+        >
+          <span className="glow-btn-inner">Manpower Requirement</span>
 
+        </Link>
         <Link href="/job-post">
           <button className="px-4 py-1 cursor-pointer bg-gradient-to-r from-[#7B0C0A] to-[#420705] text-white text-[1rem] rounded-[4px]">
             Talent Bank
