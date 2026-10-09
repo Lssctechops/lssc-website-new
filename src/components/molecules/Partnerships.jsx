@@ -33,7 +33,7 @@ const Partnerships = () => {
           Any public or private training institute that meets LSSC’s criteria
           and follows NSDC guidelines can seek affiliation. The institute must
           commit to delivering NSQF and NOS-aligned training programs with
-          quality and complianc.{" "}
+          quality and compliance.{" "}
           <Link
             className="text-[#0000FF] underline"
             href={"/partners/affiliation"}
@@ -53,7 +53,9 @@ const Partnerships = () => {
         <div className="flex w-full justify-end">
           <Link
             className="text-white flex gap-1 font-medium underline rounded-lg p-2 bg-[#7C0903]"
-            href="https://docs.google.com/document/d/1QkN2SITcB6RVjl_rZWrvRX_J_Dgs3WsO/edit?rtpof=true&sd=true#bookmark=id.2zenhdhxbat3"
+            href="https://docs.google.com/document/d/1QkN2SITcB6RVjl_rZWrvRX_J_Dgs3WsO/view"
+            target="_blank"
+            rel="noopener noreferrer"
           >
             <IoMdEye size={24} />
             Affiliation form

@@ -8,6 +8,13 @@ import Image from "next/image";
 import moment from "moment";
 import { limitTextLength } from "~/utils/limitText";
 
+// Blocks empty links and the old vercel.app test links
+const isValidLink = (link) =>
+  link && link !== "#" && !link.includes("vercel.app");
+
+// Fixes titles that start with "EOI)" instead of "(EOI)"
+const cleanTitle = (title = "") => title.trim().replace(/^EOI\)/i, "(EOI)");
+
 export default function HeroSlider({
   heroBanners = [
     {
@@ -18,8 +25,8 @@ export default function HeroSlider({
     },
   ],
 
-  eventList,
-  noticeList,
+  eventList = [],
+  noticeList = [],
 }) {
   const [currentSlide, setCurrentSlide] = useState(0);
   const sliderRef = useRef(null);
@@ -33,26 +40,49 @@ export default function HeroSlider({
     beforeChange: (oldIndex, newIndex) => setCurrentSlide(newIndex),
   };
 
+  // Notices + events for the grey ticker, duplicates removed
+  const tickerList = [
+    ...(noticeList || []).slice(0, 10),
+    ...(eventList || []).slice(0, 10),
+  ].filter(
+    (item, i, arr) =>
+      arr.findIndex((x) => cleanTitle(x.title) === cleanTitle(item.title)) ===
+      i
+  );
+
   return (
     <div className="relative w-full overflow-hidden">
       {/* Hero Slider */}
       <Slider ref={sliderRef} {...settings}>
-        {heroBanners.map(({ title, _id, thumbnail, link = "#", position }) => (
-          <Link target="_blank" href={link || "#"} key={_id}>
+        {heroBanners.map(({ title, _id, thumbnail, link }) => {
+          const banner = (
             <div className="relative w-full outline-none">
               <Image
                 priority={true}
                 // quality={50}
                 src={thumbnail || "/home/banner-placeholder-v1.webp"}
-                alt={title}
-                title={title}
+                alt={title || "LSSC banner"}
+                title={title || "LSSC banner"}
                 width={1920}
                 height={800}
                 className="aspect-[28/9] w-full object-cover bg-gray-200"
               />
             </div>
-          </Link>
-        ))}
+          );
+
+          return isValidLink(link) ? (
+            <Link
+              target="_blank"
+              rel="noopener noreferrer"
+              href={link}
+              key={_id}
+            >
+              {banner}
+            </Link>
+          ) : (
+            <div key={_id}>{banner}</div>
+          );
+        })}
       </Slider>
 
       {/* Blue Ticker (Marquee) */}
@@ -78,25 +108,37 @@ export default function HeroSlider({
           <span>Looking for Skilled & Certified Workforce?</span>
         </div>
       </div>
+
+      {/* Grey Ticker – Notices & Events */}
       <div className="bg-gray-200  text-red-500 py-1 md:py-5 w-full whitespace-nowrap  overflow-hidden">
         <div className="animate-marquee  gap-5 px-4 text-xs md:text-sm">
-          {[...noticeList.slice(0, 10), ...eventList.slice(0, 10)].map(
-            ({ title, _id, createdAt, hyperLink = "#" }, index) => (
+          {tickerList.map(({ title, _id, createdAt, hyperLink }) => {
+            const content = (
+              <>
+                <span className="text-primary-600 font-bold">
+                  {moment(createdAt).format("D MMM YYYY")}
+                </span>
+                <span className="text-gray-400"> | </span>
+                {limitTextLength(cleanTitle(title), 60)}
+              </>
+            );
+
+            return isValidLink(hyperLink) ? (
               <Link
                 key={_id}
                 target="_blank"
-                href={hyperLink || "#"}
+                rel="noopener noreferrer"
+                href={hyperLink}
                 className="w-[300px] text-wrap text-center"
               >
-                <span className="text-primary-600 font-bold">
-                  {moment(createdAt).format("D MMM")}
-                </span>
-
-                <span className="text-gray-400"> | </span>
-                {limitTextLength(title, 60)}
+                {content}
               </Link>
-            )
-          )}
+            ) : (
+              <span key={_id} className="w-[300px] text-wrap text-center">
+                {content}
+              </span>
+            );
+          })}
         </div>
       </div>
 

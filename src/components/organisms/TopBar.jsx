@@ -8,7 +8,23 @@ import MobileSidebar from "./MobileDrawer";
 import { IoIosCall } from "react-icons/io";
 import { IoMail } from "react-icons/io5";
 import { LanguageSwitcher } from "../molecules/language-switcher";
+
+// SCALE India user portal link
+const SCALE_APP_URL = "https://www.scaleindia.org/#/login";
+
 const TopBar = () => {
+  const scaleLogo = (
+    <Image
+      priority={true}
+      className="w-[150px]  md:w-[110px] rounded-sm  object-contain"
+      // src={`/img/scale-app.webp`}
+      src="https://imagedelivery.net/QG8_dZ1qAgTI1Cq9RSDiZg/b9bb7355-eca5-4837-2bff-521e471cf500/public"
+      alt="SCALE India portal"
+      width={100}
+      height={50}
+    />
+  );
+
   return (
     <div className="w-full">
       {/* social navigation */}
@@ -20,7 +36,7 @@ const TopBar = () => {
 
             <div className="flex flex-row items-center gap-2">
               <IoIosCall />
-              <Link href="tel:044 - 22500146" className="text-sm font-medium">
+              <Link href="tel:+914422500146" className="text-sm font-medium">
                 044 - 22500146
               </Link>
             </div>
@@ -38,7 +54,13 @@ const TopBar = () => {
 
           <div className="inline-flex justify-end w-fit gap-2 md:gap-4">
             {socialLinks.map((social, index) => (
-              <Link key={index} href={social.url} title={social.name}>
+              <Link
+                key={index}
+                href={social.url}
+                title={social.name}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <span className="text-white text-sm md:text-xl">
                   {social.icon}
                 </span>
@@ -67,17 +89,18 @@ const TopBar = () => {
             </Link>
 
             <div className="flex flex-row items-center gap-2">
-              <Link href={`#`}>
-                <Image
-                  priority={true}
-                  className="w-[150px]  md:w-[110px] rounded-sm  object-contain"
-                  // src={`/img/scale-app.webp`}
-                  src="https://imagedelivery.net/QG8_dZ1qAgTI1Cq9RSDiZg/b9bb7355-eca5-4837-2bff-521e471cf500/public"
-                  alt="scale app"
-                  width={100}
-                  height={50}
-                />
-              </Link>
+              {SCALE_APP_URL ? (
+                <Link
+                  href={SCALE_APP_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title="SCALE India portal"
+                >
+                  {scaleLogo}
+                </Link>
+              ) : (
+                scaleLogo
+              )}
               <LanguageSwitcher />
             </div>
 
@@ -134,7 +157,7 @@ export default TopBar;
 const socialLinks = [
   {
     icon: <FaFacebookSquare />,
-    url: "https://www.facebook.com/LSSC.INDIA ",
+    url: "https://www.facebook.com/LSSC.INDIA",
     name: "Facebook",
   },
   {
@@ -145,11 +168,11 @@ const socialLinks = [
   {
     icon: <FaXTwitter />,
     url: "https://x.com/leatherssc",
-    name: "Twitter",
+    name: "X (Twitter)",
   },
   {
     icon: <FaLinkedin />,
-    url: "https://www.linkedin.com/company/27305693/admin/dashboard/ ",
-    name: "Linkedin",
+    url: "https://www.linkedin.com/company/27305693/",
+    name: "LinkedIn",
   },
 ];

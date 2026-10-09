@@ -2,6 +2,7 @@ import axios from "axios";
 import HomePage from "~/components/pages/HomePage";
 import MainLayout from "~/components/templates/MainLayout";
 import { unstable_noStore as noStore } from "next/cache";
+
 export default async function Home() {
   noStore();
   const heroBanners = await getHeroBanners();
@@ -10,8 +11,8 @@ export default async function Home() {
   return (
     <MainLayout>
       <HomePage
-        eventList={eventList}
-        noticeList={noticeList}
+        eventList={eventList || []}
+        noticeList={noticeList || []}
         heroBanners={heroBanners || []}
       />
     </MainLayout>
@@ -24,8 +25,11 @@ async function getHeroBanners() {
       method: "GET",
       url: `${process.env.NEXT_PUBLIC_API_URL}/api/public/banner`,
     });
-    return res?.data?.data;
-  } catch (error) {}
+    return res?.data?.data || [];
+  } catch (error) {
+    console.error("Banner fetch failed:", error?.message);
+    return [];
+  }
 }
 
 async function getNotice() {
@@ -34,8 +38,11 @@ async function getNotice() {
       method: "GET",
       url: `${process.env.NEXT_PUBLIC_API_URL}/api/public/notice?type=notice&limit=100`,
     });
-    return res?.data?.data;
-  } catch (error) {}
+    return res?.data?.data || [];
+  } catch (error) {
+    console.error("Notice fetch failed:", error?.message);
+    return [];
+  }
 }
 
 async function getEvents() {
@@ -44,6 +51,9 @@ async function getEvents() {
       method: "GET",
       url: `${process.env.NEXT_PUBLIC_API_URL}/api/public/notice?type=event&limit=100`,
     });
-    return res?.data?.data;
-  } catch (error) {}
+    return res?.data?.data || [];
+  } catch (error) {
+    console.error("Event fetch failed:", error?.message);
+    return [];
+  }
 }

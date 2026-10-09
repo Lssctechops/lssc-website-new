@@ -78,7 +78,7 @@ const partners = [
     title: "INDUSTRY",
     description:
       "At LSSC, we believe collaboration is the key to sustainable skill development. By forging strategic partnerships with industry leaders, training providers, and assessment agencies, we are creating a robust ecosystem that nurtures talent, ensures quality, and meets the evolving demands of the leather sector. Together, we're shaping a skilled workforce that drives growth, innovation, and global competitiveness.",
-    route: "/who-we-are",
+    route: "/partners",
   },
   {
     img: "https://imagedelivery.net/QG8_dZ1qAgTI1Cq9RSDiZg/97cbde7f-ea9b-44b4-1089-432609c8b100/public",

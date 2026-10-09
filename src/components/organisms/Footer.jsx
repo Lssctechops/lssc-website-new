@@ -125,16 +125,16 @@ const Footer = () => {
                     className="w-full p-3 bg-white text-black"
                   />
                 </div>
-                <div className="flex flex-col gap-5">
-                  <label htmlFor="email" className="block text-sm font-medium">
-                    BIRTHDAY*
+                               <div className="flex flex-col gap-5">
+                  <label htmlFor="birthday" className="block text-sm font-medium">
+                    BIRTHDAY (optional)
                   </label>
                   <input
+                    id="birthday"
                     name="birthday"
+                    type="date"
                     value={formData?.birthday}
                     onChange={handleChange}
-                    required
-                    placeholder="MM/DD/YYYY"
                     className="w-full p-3 bg-white text-black"
                   />
                 </div>
@@ -211,6 +211,9 @@ const Footer = () => {
           <div className="flex space-x-4 pt-2">
             <a
               href="https://www.facebook.com/LSSC.INDIA"
+              title="Facebook"
+              target="_blank"
+              rel="noopener noreferrer"
               className="w-10 h-10 rounded-full border border-white flex items-center justify-center hover:bg-white hover:text-black transition duration-300"
             >
               <svg
@@ -223,7 +226,30 @@ const Footer = () => {
               </svg>
             </a>
             <a
-              href="https://www.linkedin.com/company/27305693/admin/dashboard/"
+              href="https://www.instagram.com/leather.ssc/"
+              title="Instagram"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-10 h-10 rounded-full border border-white flex items-center justify-center hover:bg-white hover:text-black transition duration-300"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-5 w-5"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                viewBox="0 0 24 24"
+              >
+                <rect x="3" y="3" width="18" height="18" rx="5" />
+                <circle cx="12" cy="12" r="4" />
+                <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
+              </svg>
+            </a>
+            <a
+              href="https://www.linkedin.com/company/27305693/"
+              title="LinkedIn"
+              target="_blank"
+              rel="noopener noreferrer"
               className="w-10 h-10 rounded-full border border-white flex items-center justify-center hover:bg-white hover:text-black transition duration-300"
             >
               <svg
@@ -237,6 +263,9 @@ const Footer = () => {
             </a>
             <a
               href="https://x.com/leatherssc"
+              title="X (Twitter)"
+              target="_blank"
+              rel="noopener noreferrer"
               className="w-10 h-10 rounded-full border border-white flex items-center justify-center hover:bg-white hover:text-black transition duration-300"
             >
               <svg
@@ -257,7 +286,7 @@ const Footer = () => {
         <div className="border-t border-white/20">
           <div className="max-w-7xl mx-auto px-4 py-6 flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
             <div className="flex flex-col justify-center items-center md:flex-row gap-6 uppercase font-semibold tracking-wide">
-              <Link href="#" className="hover:underline">
+              {/* <Link href="#" className="hover:underline">
                 Site Map
               </Link>
               <Link href="#" className="hover:underline">
@@ -268,10 +297,10 @@ const Footer = () => {
               </Link>
               <Link href="#" className="hover:underline">
                 User Content Permission Terms
-              </Link>
+              </Link> */}
             </div>
             <div className="flex items-center gap-6">
-              <p className="text-xs text-white/70">@ 2012 LSSC</p>
+              <p className="text-xs text-white/70">@ 2026 LSSC</p>
               <Link
                 href="#"
                 className="uppercase font-semibold text-xs hover:underline"
@@ -283,13 +312,9 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-white/10 text-center py-4 space-y-3">
-          <div className="max-w-7xl mx-auto px-4 pt-4 text-center text-xs text-white">
-            This site is intended for US consumers. Cookies and related
-            technology are used for advertising. To learn more, visit AdChoices
-            and our Privacy Policy.
-          </div>
+         
           <div className="text-center text-sm text-muted-foreground leading-relaxed">
-            <p>© 2012 Leather Sector Skill Council. All Rights Reserved.</p>
+            <p>© 2026 Leather Sector Skill Council. All Rights Reserved.</p>
             <p className="mt-1">
               Designed & Developed with ❤️ by LSSC IT Team
             </p>
@@ -308,7 +333,7 @@ const menus = [
     navigation: [
       {
         label: "Ministry of Finance",
-        route: "https://financialservices.gov.in/beta/en",
+               route: "https://finmin.gov.in/",
       },
       { label: "MSME", route: "https://msme.gov.in/" },
       { label: "MSDE", route: "https://www.msde.gov.in/" },
@@ -333,6 +358,7 @@ const menus = [
       { label: "Partners", route: "/partners" },
       { label: "Library", route: "/media/library/news-letter" },
       { label: "Talent Bank", route: "/job-post" },
+      { label: "Contact Us", route: "/contact-us" },
     ],
   },
   {

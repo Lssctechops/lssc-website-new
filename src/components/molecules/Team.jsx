@@ -60,7 +60,7 @@ const teamMembers = [
         designation: "Manager – Accounts",
         email: "accounts@leatherssc.org",
         mobile: "7277239976",
-        linkedin: "",
+        linkedin: "https://www.linkedin.com/company/27305693/",
         image:
             "https://imagedelivery.net/QG8_dZ1qAgTI1Cq9RSDiZg/65eeeae1-2f3a-4bad-671a-20a1ecfd3b00/public",
     },
@@ -117,7 +117,7 @@ const teamMembers = [
         designation: "Pattern Maker & Master Trainer",
         email: "elangovan@leatherssc.org",
         mobile: "9176662820",
-        linkedin: "",
+        linkedin: "https://www.linkedin.com/company/27305693/",
         image:
             "https://imagedelivery.net/QG8_dZ1qAgTI1Cq9RSDiZg/0e74893a-f2c6-4098-bc57-4928836d9300/public",
     },
@@ -125,7 +125,7 @@ const teamMembers = [
         name: "Arun Kumar",
         designation: "Executive Assistant",
         email: "lssc@leatherssc.org",
-        mobile: " 9360132934",
+        mobile: "9360132934",
         linkedin: "https://www.linkedin.com/in/arun-kumar-b0a862320/",
         image:
             "https://imagedelivery.net/QG8_dZ1qAgTI1Cq9RSDiZg/f1e65dc1-0fd1-4b88-5db9-04d4a324e100/public",
