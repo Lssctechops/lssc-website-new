@@ -2,17 +2,22 @@
 
 import Image from "next/image";
 import StyledHeading from "../atoms/StyledHeading";
-import { useEffect, useState } from "react";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import { MdChevronLeft, MdChevronRight } from "react-icons/md";
+import { useRef, useEffect, useState } from "react";
 
-const Team = () => {
-  const [ceo, setCeo] = useState(null);
+const GoverningCouncil = () => {
+  const [chairman, setChairman] = useState(null);
   const [members, setMembers] = useState([]);
+  const sliderRef = useRef(null);
 
   useEffect(() => {
     const load = async () => {
       try {
         const res = await fetch(
-          `${process.env.NEXT_PUBLIC_API_URL}/api/public/teamMember?limit=500`
+          `${process.env.NEXT_PUBLIC_API_URL}/api/public/governingCouncil?limit=500`
         );
         const json = await res.json();
         const list = (json?.data || [])
@@ -21,15 +26,12 @@ const Team = () => {
           .map((m) => ({
             name: m.name,
             designation: m.designation,
-            email: m.email,
-            mobile: m.mobile,
-            linkedin: m.linkedin,
+            company: m.company,
             image: m?.thumbnail?.url || "",
-            isCeo: m.isCeo,
+            isChairman: m.isChairman,
           }));
-        const featured = list.find((m) => m.isCeo) || list[0] || null;
-        setCeo(featured);
-        setMembers(list.filter((m) => m !== featured));
+        setChairman(list.find((m) => m.isChairman) || null);
+        setMembers(list.filter((m) => !m.isChairman));
       } catch (err) {
         console.log(err);
       }
@@ -37,173 +39,112 @@ const Team = () => {
     load();
   }, []);
 
-  return (
-    <section
-      id="our-team"
-      className="py-16 px-4 bg-gradient-to-b from-white to-primary-50"
-    >
-      <div className="max-w-7xl mx-auto">
-        {/* HEADING */}
-        <StyledHeading
-          heading={
-            <>
-              Meet Our <span className="text-primary-600">Team</span>
-            </>
-          }
-          containerStyle={"mx-auto"}
-        />
-        {/* DESCRIPTION */}
-        <p className="text-center text-gray-600 max-w-3xl mx-auto mt-4 leading-7">
-          Our dedicated professionals work together to drive excellence in
-          training, assessments, skill development, and industry collaboration
-          across the leather sector.
-        </p>
+  const settings = {
+    dots: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 6,
+    slidesToScroll: 3,
+    autoplaySpeed: 5000,
+    responsive: [
+      { breakpoint: 1120, settings: { slidesToShow: 5, slidesToScroll: 1 } },
+      { breakpoint: 1024, settings: { slidesToShow: 2, slidesToScroll: 1 } },
+      { breakpoint: 768, settings: { slidesToShow: 2.1, slidesToScroll: 1 } },
+      { breakpoint: 600, settings: { slidesToShow: 1, slidesToScroll: 1 } },
+    ],
+  };
 
-        {/* CEO CARD */}
-        {ceo && (
-          <div className="flex justify-center mt-14 mb-16">
-            <div className="relative overflow-hidden rounded-3xl p-[1px] bg-gradient-to-br from-primary-400 via-primary-200 to-primary-600 max-w-sm w-full">
-              <div className="bg-white rounded-3xl p-1 text-center relative">
-                <div className="absolute top-0 left-0 w-full h-32 bg-primary-100 opacity-40 blur-3xl"></div>
-                <div className="relative flex justify-center z-10">
-                  <div className="relative w-48 h-48 rounded-full overflow-hidden border-4 border-primary-100 shadow-xl">
-                    {ceo.image ? (
+  return (
+    <section id="governing-council">
+      <StyledHeading
+        heading={
+          <>
+            <span className="text-primary-600">Governing</span> Council
+          </>
+        }
+        containerStyle={"mx-auto"}
+      />
+
+      {chairman && (
+        <div className="w-fit mx-auto text-center mt-6">
+          {chairman.image ? (
+            <Image
+              className="w-[215px] rounded-3xl object-cover"
+              src={chairman.image}
+              alt={chairman.name}
+              width={500}
+              height={500}
+              priority
+              quality={80}
+            />
+          ) : null}
+
+          <h3 className="font-medium mt-2">{chairman.name}</h3>
+          <p className="text-sm font-normal">{chairman.designation}</p>
+          <p className="text-sm font-normal">{chairman.company}</p>
+        </div>
+      )}
+
+      <h2 className="my-6 text-center text-3xl font-semibold">
+        The People behind the Mission
+      </h2>
+      <p className="mx-auto mb-10 text-center lg:w-[60%]">
+        The Leather Sector Skill Council (LSSC) comprises eminent leaders from
+        the leather industry and key government Nominees. Their collective
+        expertise, strategic vision, and deep industry knowledge are driving our
+        mission to shape policies, forge industry partnerships, and ensure that
+        our skilling initiatives align with the evolving needs of the sector.
+      </p>
+      <div className="w-full ">
+        {members.length > 0 && (
+        <Slider key={members.length} ref={sliderRef} {...settings}>
+          {members.map((member, index) => {
+            const { image, name, company, designation } = member;
+            return (
+              <div key={index} className="w-full  flex-center px-2 xl:px-0">
+                <div className="group mx-auto relative h-80 w-full cursor-pointer rounded-3xl transition-all duration-300 ease-in-out lg:w-[80%] hover:z-[99]">
+                  <div className="absolute inset-0 transition-all duration-300 ease-in-out group-hover:w-[130%] group-hover:left-1/2 group-hover:-translate-x-1/2">
+                    {image ? (
                       <Image
-                        src={ceo.image}
-                        alt={ceo.name}
-                        fill
-                        className="object-cover object-top"
+                        className="h-full w-full rounded-3xl object-cover"
+                        src={image || "/placeholder.svg"}
+                        alt={name}
+                        width={500}
+                        height={500}
                       />
-                    ) : null}
+                    ) : (
+                      <div className="h-full w-full rounded-3xl flex-center bg-[#3f2d21] "></div>
+                    )}
+                    <div className="transition:opacity absolute bottom-3 left-0 w-full py-2 rounded-xl border-2 border-gray-100/30 bg-black/30 text-center text-white backdrop-blur duration-300 ease-in-out group-hover:opacity-100 lg:opacity-0">
+                      <h3 className="font-medium">{name}</h3>
+                      <p className="text-sm font-normal">{designation}</p>
+                      <p className="text-sm font-normal">{company}</p>
+                    </div>
                   </div>
                 </div>
-                <h2 className="mt-6 text-2xl font-bold text-gray-800 relative z-10">
-                  {ceo.name}
-                </h2>
-                <p className="text-primary-600 font-medium mt-2 relative z-10">
-                  {ceo.designation}
-                </p>
-                {ceo.email && (
-                  <a
-                    href={`mailto:${ceo.email}`}
-                    className="text-gray-600 text-sm mt-5 break-all relative z-10 flex items-center justify-center gap-2 hover:text-primary-600"
-                  >
-                    <img
-                      src="https://imagedelivery.net/QG8_dZ1qAgTI1Cq9RSDiZg/fd4855fa-0f2e-4317-d998-da9ae051d300/public"
-                      alt="Zoho Mail"
-                      className="w-5 h-5 object-contain"
-                    />
-                    {ceo.email}
-                  </a>
-                )}
-                {ceo.mobile && (
-                  <a
-                    href={`tel:${ceo.mobile}`}
-                    className="text-gray-700 text-sm mt-3 relative z-10 flex items-center justify-center gap-2 hover:text-primary-600"
-                  >
-                    <img
-                      src="https://cdn-icons-png.flaticon.com/512/724/724664.png"
-                      alt="phone"
-                      className="w-5 h-5"
-                    />
-                    {ceo.mobile}
-                  </a>
-                )}
-                {ceo.linkedin && (
-                  <a
-                    href={ceo.linkedin}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="mt-4 inline-flex items-center gap-2 text-blue-600 hover:text-blue-800"
-                  >
-                    <img
-                      src="https://cdn-icons-png.flaticon.com/512/174/174857.png"
-                      alt="linkedin"
-                      className="w-6 h-6"
-                    />
-                    LinkedIn
-                  </a>
-                )}
               </div>
-            </div>
-          </div>
+            );
+          })}
+        </Slider>
         )}
 
-        {/* TEAM MEMBERS */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-          {members.map((team, index) => (
-            <div
-              key={index}
-              className="relative overflow-hidden rounded-3xl p-[1px] bg-gradient-to-br from-primary-400 via-primary-200 to-primary-600 hover:scale-105 transition-all duration-300"
-            >
-              <div className="bg-white rounded-3xl h-full p-10 text-center relative">
-                <div className="absolute top-0 left-0 w-full h-32 bg-primary-100 opacity-40 blur-3xl"></div>
-                <div className="relative flex justify-center z-10">
-                  <div className="relative w-40 h-40 rounded-full overflow-hidden border-4 border-primary-100 shadow-lg">
-                    {team.image ? (
-                      <Image
-                        src={team.image}
-                        alt={team.name}
-                        fill
-                        className="object-cover object-top"
-                      />
-                    ) : null}
-                  </div>
-                </div>
-                <h3 className="mt-5 text-lg font-bold text-gray-800 relative z-10">
-                  {team.name}
-                </h3>
-                <p className="text-primary-600 text-sm mt-2 min-h-[48px] relative z-10">
-                  {team.designation}
-                </p>
-                {team.email && (
-                  <a
-                    href={`mailto:${team.email}`}
-                    className="text-gray-600 text-sm mt-4 break-all relative z-10 flex items-center justify-center gap-2 hover:text-primary-600"
-                  >
-                    <img
-                      src="https://imagedelivery.net/QG8_dZ1qAgTI1Cq9RSDiZg/fd4855fa-0f2e-4317-d998-da9ae051d300/public"
-                      alt="Zoho Mail"
-                      className="w-5 h-5 object-contain"
-                    />
-                    {team.email}
-                  </a>
-                )}
-                {team.mobile && (
-                  <a
-                    href={`tel:${team.mobile}`}
-                    className="text-gray-700 text-sm mt-3 relative z-10 flex items-center justify-center gap-2 hover:text-primary-600"
-                  >
-                    <img
-                      src="https://cdn-icons-png.flaticon.com/512/724/724664.png"
-                      alt="phone"
-                      className="w-5 h-5"
-                    />
-                    {team.mobile}
-                  </a>
-                )}
-                {team.linkedin && (
-                  <a
-                    href={team.linkedin}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="mt-4 inline-flex items-center gap-2 text-blue-600 hover:text-blue-800"
-                  >
-                    <img
-                      src="https://cdn-icons-png.flaticon.com/512/174/174857.png"
-                      alt="linkedin"
-                      className="w-6 h-6"
-                    />
-                    LinkedIn
-                  </a>
-                )}
-              </div>
-            </div>
-          ))}
+        <div className="flex-center gap-4 py-4">
+          <button
+            onClick={() => sliderRef.current?.slickPrev()}
+            className="bg-black text-white rounded-lg p-2 cursor-pointer"
+          >
+            <MdChevronLeft size={24} />
+          </button>
+          <button
+            onClick={() => sliderRef.current?.slickNext()}
+            className="bg-black text-white rounded-lg p-2 cursor-pointer"
+          >
+            <MdChevronRight size={24} />
+          </button>
         </div>
       </div>
     </section>
   );
 };
 
-export default Team;
+export default GoverningCouncil;
