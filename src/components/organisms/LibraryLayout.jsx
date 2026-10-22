@@ -53,6 +53,10 @@ const libraryNav = [
     label: "Books",
     route: "/media/library/books",
   },
+  // {
+  //   label: "Skill Learning Videos",
+  //   route: "/media/library/skill-learning-videos",
+  // },
   {
     label: "Model Curriculum",
     route: "/media/library/model-curriculum",
