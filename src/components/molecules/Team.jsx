@@ -29,8 +29,7 @@ const Team = () => {
   useEffect(() => {
     const load = async () => {
       try {
-        const base = process.env.NEXT_PUBLIC_API_URL;
-        if (!base) return;
+        const base = "https://lssc-api.onrender.com";
         const res = await fetch(`${base}/api/public/teamMember?limit=500`);
         const json = await res.json();
         const list = (json?.data || [])
